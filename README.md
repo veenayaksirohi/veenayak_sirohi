@@ -2,7 +2,7 @@
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-blue?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-4.x-blue?logo=typescript)
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" width="32" height="32" style="vertical-align:middle;"/>
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38bdf8?logo=tailwindcss&logoColor=white)
 ![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Components-8b5cf6?logo=react)
 ![Lucide](https://img.shields.io/badge/Lucide-Icons-f59e42?logo=lucide)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
@@ -13,23 +13,38 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 ---
 
+## 📦 Repository
+
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="28" height="28" style="vertical-align:middle;"/> veenayak_sirohi-ua](https://github.com/veenayaksirohi/veenayak_sirohi-ua.git)
+
+---
+
 ## 📑 Table of Contents
 
-- [✨ Features](#-features)
-- [🛠️ Tech Stack](#-tech-stack)
-- [🚦 Getting Started](#-getting-started)
-  - [📦 Prerequisites](#prerequisites)
-  - [⚙️ Installation](#installation)
-  - [💻 Development](#development)
-- [🚀 Deployment](#-deployment)
-- [🎨 Customization](#-customization)
-- [📱 Responsive Design](#-responsive-design)
-- [⚡ Performance](#-performance)
-- [🔧 Scripts](#-scripts)
-- [📄 License](#-license)
-- [🤝 Contributing](#-contributing)
-- [💬 Support](#-support)
-- [🙏 Acknowledgments](#-acknowledgments)
+- [Personal Portfolio Website 🚀](#personal-portfolio-website-)
+  - [📦 Repository](#-repository)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [✨ Features](#-features)
+  - [🛠️ Tech Stack](#️-tech-stack)
+  - [🚦 Getting Started](#-getting-started)
+    - [📦 Prerequisites](#-prerequisites)
+    - [⚙️ Installation](#️-installation)
+    - [💻 Development](#-development)
+  - [🚀 Deployment](#-deployment)
+    - [Automatic Deployment (Recommended)](#automatic-deployment-recommended)
+    - [Manual Deployment](#manual-deployment)
+  - [🎨 Customization](#-customization)
+    - [Personal Information](#personal-information)
+    - [Styling](#styling)
+    - [Content](#content)
+  - [📷 Sample Image](#-sample-image)
+  - [📱 Responsive Design](#-responsive-design)
+  - [⚡ Performance](#-performance)
+  - [🔧 Scripts](#-scripts)
+  - [📄 License](#-license)
+  - [🤝 Contributing](#-contributing)
+  - [💬 Support](#-support)
+  - [🙏 Acknowledgments](#-acknowledgments)
 
 ---
 
@@ -45,9 +60,15 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 ## 🛠️ Tech Stack
 
 <p align="left">
-  <a href="https://nextjs.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" width="40" height="40"/></a>
-  <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="40" height="40"/></a>
-  <a href="https://tailwindcss.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" width="40" height="40"/></a>
+  <a href="https://nextjs.org/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" width="40" height="40"/>
+  </a>
+  <a href="https://www.typescriptlang.org/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="40" height="40"/>
+  </a>
+  <a href="https://tailwindcss.com/" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/tailwindcss.png" alt="Tailwind CSS" width="40" height="40"/>
+  </a>
   <a href="https://ui.shadcn.com/" target="_blank"><img src="https://raw.githubusercontent.com/shadcn/ui/main/apps/www/public/favicon.ico" alt="shadcn/ui" width="40" height="40"/></a>
   <a href="https://lucide.dev/" target="_blank"><img src="https://lucide.dev/logo.svg" alt="Lucide" width="40" height="40"/></a>
 </p>
@@ -70,7 +91,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/portfolio-website.git
+   git clone https://github.com/veenayaksirohi/portfolio-website.git
    cd portfolio-website
    ```
 2. **Install dependencies**
@@ -178,14 +199,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/portfolio-website/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/veenayaksirohi/portfolio-website/issues).
 
 ## 💬 Support
 
 <p align="left">
-  <a href="mailto:veenayaksirohi@gmail.com" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/regular/email.svg" alt="Email" width="32" height="32"/></a>
-  <a href="https://www.linkedin.com/in/veenayak-sirohi-ab30ab227" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="32" height="32"/></a>
-  <a href="https://github.com/veenayaksirohi" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="32" height="32"/></a>
+  <a href="mailto:veenayaksirohi@gmail.com" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/gmail-new.png" alt="Email" width="32" height="32"/>
+  </a>
+  <a href="https://www.linkedin.com/in/veenayak-sirohi-ab30ab227" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="32" height="32"/>
+  </a>
+  <a href="https://github.com/veenayaksirohi" target="_blank">
+    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="GitHub" width="32" height="32" style="background:#333; border-radius:50%;"/>
+  </a>
 </p>
 
 If you have any questions or need help with setup, feel free to reach out!
