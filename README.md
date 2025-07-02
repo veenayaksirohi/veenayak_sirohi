@@ -1,8 +1,39 @@
-# Personal Portfolio Website
+# Personal Portfolio Website 🚀
+
+![Next.js](https://img.shields.io/badge/Next.js-14-blue?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-4.x-blue?logo=typescript)
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" width="32" height="32" style="vertical-align:middle;"/>
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Components-8b5cf6?logo=react)
+![Lucide](https://img.shields.io/badge/Lucide-Icons-f59e42?logo=lucide)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
+
+> "Design is not just what it looks like and feels like. Design is how it works." — Steve Jobs
 
 A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Designed for GitHub Pages deployment with a focus on performance, accessibility, and user experience.
 
-## 🚀 Features
+---
+
+## 📑 Table of Contents
+
+- [✨ Features](#-features)
+- [🛠️ Tech Stack](#-tech-stack)
+- [🚦 Getting Started](#-getting-started)
+  - [📦 Prerequisites](#prerequisites)
+  - [⚙️ Installation](#installation)
+  - [💻 Development](#development)
+- [🚀 Deployment](#-deployment)
+- [🎨 Customization](#-customization)
+- [📱 Responsive Design](#-responsive-design)
+- [⚡ Performance](#-performance)
+- [🔧 Scripts](#-scripts)
+- [📄 License](#-license)
+- [🤝 Contributing](#-contributing)
+- [💬 Support](#-support)
+- [🙏 Acknowledgments](#-acknowledgments)
+
+---
+
+## ✨ Features
 
 - **Modern Design**: Clean, professional design with smooth animations
 - **Fully Responsive**: Optimized for all devices and screen sizes
@@ -13,6 +44,14 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 ## 🛠️ Tech Stack
 
+<p align="left">
+  <a href="https://nextjs.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" width="40" height="40"/></a>
+  <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="40" height="40"/></a>
+  <a href="https://tailwindcss.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" width="40" height="40"/></a>
+  <a href="https://ui.shadcn.com/" target="_blank"><img src="https://raw.githubusercontent.com/shadcn/ui/main/apps/www/public/favicon.ico" alt="shadcn/ui" width="40" height="40"/></a>
+  <a href="https://lucide.dev/" target="_blank"><img src="https://lucide.dev/logo.svg" alt="Lucide" width="40" height="40"/></a>
+</p>
+
 - **Framework**: Next.js 14 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
@@ -20,63 +59,46 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 - **Icons**: Lucide React
 - **Deployment**: GitHub Pages with GitHub Actions
 
-## 📋 Sections
+## 🚦 Getting Started
 
-- **Hero**: Eye-catching introduction with call-to-action
-- **About**: Personal story and core values
-- **Resume**: Education, experience, and skills overview
-- **Work Experience**: Detailed professional history
-- **Skills**: Technical and soft skills with proficiency levels
-- **Projects**: Showcase of recent work and personal projects
-- **Certifications**: Professional certifications and achievements
-- **Testimonials**: Client feedback and recommendations
-- **Blog**: Latest articles and insights
-- **Contact**: Contact form and social links
+### 📦 Prerequisites
 
-## 🚀 Quick Start
+- Node.js 18+
+- Git
 
-### Prerequisites
-
-- Node.js 18+ installed
-- Git installed
-- GitHub account
-
-### Installation
+### ⚙️ Installation
 
 1. **Clone the repository**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/yourusername/portfolio-website.git
    cd portfolio-website
-   \`\`\`
-
+   ```
 2. **Install dependencies**
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
-3. **Start development server**
-   \`\`\`bash
-   npm run dev
-   \`\`\`
+### 💻 Development
 
-4. **Open in browser**
-   Navigate to `http://localhost:3000`
+Start the development server:
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📦 Deployment to GitHub Pages
+## 🚀 Deployment
 
 ### Automatic Deployment (Recommended)
 
 1. **Update configuration**
    - Edit `next.config.js` and replace `your-repo-name` with your actual repository name
    - Update personal information in all components
-
 2. **Push to GitHub**
-   \`\`\`bash
+   ```bash
    git add .
    git commit -m "Initial commit"
    git push origin main
-   \`\`\`
-
+   ```
 3. **Enable GitHub Pages**
    - Go to your repository settings
    - Navigate to "Pages" section
@@ -86,14 +108,13 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 ### Manual Deployment
 
 1. **Build the project**
-   \`\`\`bash
+   ```bash
    npm run build
-   \`\`\`
-
-2. **Deploy to GitHub Pages**
-   \`\`\`bash
+   ```
+2. **Export static files**
+   ```bash
    npm run export
-   \`\`\`
+   ```
 
 ## 🎨 Customization
 
@@ -121,6 +142,12 @@ Update the following files with your information:
 - **Images**: Replace placeholder images in the `public` directory
 - **Resume**: Add your resume PDF to the `public` directory
 - **Projects**: Update project information and links
+
+## 📷 Sample Image
+
+<p align="center">
+  <img width="300" height="300" src="public/profile-avatar.png" alt="Profile Avatar">
+</p>
 
 ## 📱 Responsive Design
 
@@ -153,13 +180,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/portfolio-website/issues).
 
-## 📞 Support
+## 💬 Support
 
-If you have any questions or need help with setup, feel free to reach out:
+<p align="left">
+  <a href="mailto:veenayaksirohi@gmail.com" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/regular/email.svg" alt="Email" width="32" height="32"/></a>
+  <a href="https://www.linkedin.com/in/veenayak-sirohi-ab30ab227" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="32" height="32"/></a>
+  <a href="https://github.com/veenayaksirohi" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="32" height="32"/></a>
+</p>
 
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourusername)
-- **GitHub**: [Your GitHub Profile](https://github.com/yourusername)
+If you have any questions or need help with setup, feel free to reach out!
+
+- **Email**: veenayaksirohi@gmail.com
+- **LinkedIn**: [Veenayak Sirohi LinkedIn](https://www.linkedin.com/in/veenayak-sirohi-ab30ab227)
+- **GitHub**: [veenayaksirohi](https://github.com/veenayaksirohi)
 
 ## 🙏 Acknowledgments
 
