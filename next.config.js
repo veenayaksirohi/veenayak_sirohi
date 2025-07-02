@@ -20,8 +20,8 @@ const nextConfig = {
     ],
   },
   // Configure for GitHub Pages deployment
-  basePath: process.env.NODE_ENV === "production" ? "/veenayak_sirohi-ua" : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? "/veenayak_sirohi-ua/" : "",
+  basePath: process.env.NODE_ENV === "production" ? "/your-repo-name" : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "/your-repo-name/" : "",
 
   // Performance optimizations
   experimental: {
