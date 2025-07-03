@@ -15,7 +15,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 ## 📦 Repository
 
-[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="28" height="28" style="vertical-align:middle;"/> veenayak_sirohi-ua](https://github.com/veenayaksirohi/veenayak_sirohi-ua.git)
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="28" height="28" style="vertical-align:middle;"/> veenayak_sirohi](https://github.com/veenayaksirohi/veenayak_sirohi.git)
 
 ---
 
@@ -91,8 +91,8 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/veenayaksirohi/veenayak_sirohi-ua.git
-   cd veenayak_sirohi-ua
+   git clone https://github.com/veenayaksirohi/veenayak_sirohi.git
+   cd veenayak_sirohi
    ```
 2. **Install dependencies**
    ```bash
@@ -167,7 +167,7 @@ Update the following files with your information:
 ## 📷 Sample Image
 
 <p align="center">
-  <img width="300" height="300" src="/veenayak_sirohi/profile-avatar.png" alt="Profile Avatar">
+  <img width="300" height="300" src="public/profile-avatar.png" alt="Profile Avatar">
 </p>
 
 ## 📱 Responsive Design
