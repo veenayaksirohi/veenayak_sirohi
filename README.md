@@ -91,8 +91,8 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/veenayaksirohi/portfolio-website.git
-   cd portfolio-website
+   git clone https://github.com/veenayaksirohi/veenayak_sirohi-ua.git
+   cd veenayak_sirohi-ua
    ```
 2. **Install dependencies**
    ```bash

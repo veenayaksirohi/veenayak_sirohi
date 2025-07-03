@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const repo = "veenayak_sirohi-ua"; // <-- your repo name
+
 const nextConfig = {
   output: "export",
   trailingSlash: true,
@@ -20,8 +22,8 @@ const nextConfig = {
     ],
   },
   // Configure for GitHub Pages deployment
-  basePath: process.env.NODE_ENV === "production" ? "/your-repo-name" : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? "/your-repo-name/" : "",
+  basePath: process.env.NODE_ENV === "production" ? `/${repo}` : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? `/${repo}/` : "",
 
   // Performance optimizations
   experimental: {

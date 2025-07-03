@@ -18,8 +18,6 @@ export function Navigation() {
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "certifications", label: "Certifications" },
-    { id: "testimonials", label: "Testimonials" },
-    { id: "blog", label: "Blog" },
     { id: "contact", label: "Contact" },
   ]
 
@@ -65,7 +63,7 @@ export function Navigation() {
               onClick={() => scrollToSection("hero")}
               className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300"
             >
-              <Image src="/logo.png" alt="Logo" width={32} height={32} className="rounded-full" />
+              <Image src="/profile-avatar.png" alt="Logo" width={32} height={32} className="rounded-full" />
               <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Portfolio
               </span>

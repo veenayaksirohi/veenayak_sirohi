@@ -46,20 +46,20 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com",
+      value: "veenayaksirohi@gmail.com",
+      href: "mailto:veenayaksirohi@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+91 7302223304",
+      href: "tel:+917302223304",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
-      href: "https://maps.google.com",
+      value: "Greater Noida, U.P",
+      href: "https://maps.google.com/?q=Greater+Noida+U.P",
     },
   ]
 
@@ -67,20 +67,20 @@ export function Contact() {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/yourusername",
+      href: "https://github.com/veenayaksirohi",
       color: "hover:text-gray-400",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/veenayak-sirohi-ab30ab227/",
       color: "hover:text-blue-400",
     },
     {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com/yourusername",
-      color: "hover:text-blue-400",
+      icon: Mail,
+      label: "Email",
+      href: "mailto:veenayaksirohi@gmail.com",
+      color: "hover:text-red-400",
     },
   ]
 
@@ -91,6 +91,7 @@ export function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Get In{" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Touch</span>
+            <div className="text-lg text-gray-300 mt-2 font-semibold">Veenayak Sirohi</div>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Ready to start your next project? Let's discuss how we can work together to bring your ideas to life.
@@ -117,7 +118,7 @@ export function Contact() {
                       onChange={handleInputChange}
                       required
                       className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
-                      placeholder="Your full name"
+                      placeholder="Veenayak Sirohi"
                     />
                   </div>
                   <div className="space-y-2">
@@ -132,7 +133,7 @@ export function Contact() {
                       onChange={handleInputChange}
                       required
                       className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
-                      placeholder="your.email@example.com"
+                      placeholder="veenayaksirohi@gmail.com"
                     />
                   </div>
                 </div>
@@ -250,15 +251,13 @@ export function Contact() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 mb-4">
-                  I'm always interested in new opportunities and exciting projects. Whether you need a full-stack
-                  developer, want to collaborate on an open-source project, or just want to say hello, feel free to
-                  reach out!
+                  As a Computer Science student with a passion for data analysis and development, I'm eager to connect with professionals and organizations seeking skills in Python, Power BI, and data-driven solutions. If you have a project, internship, or collaboration in mind, or simply want to discuss technology and analytics, I'd love to hear from you!
                 </p>
                 <div className="space-y-2 text-sm text-gray-400">
-                  <div>• Available for freelance projects</div>
-                  <div>• Open to full-time opportunities</div>
-                  <div>• Interested in collaboration</div>
-                  <div>• Response time: Usually within 24 hours</div>
+                  <div>• Seeking internships and entry-level roles in Data Analytics or Software Development</div>
+                  <div>• Experienced with Python, Pandas, Power BI, and SQL</div>
+                  <div>• Open to freelance and remote opportunities</div>
+                  <div>• Enthusiastic about teamwork and continuous learning</div>
                 </div>
               </CardContent>
             </Card>
