@@ -11,7 +11,7 @@ function Resume() {
       degree: "B.Tech - Computer Science Engineering",
       school: "GL Bajaj Institute of Technology and Management",
       location: "Uttar Pradesh, India",
-      period: "Nov 2021 - 2025",
+      period: "Nov 2021 - Jun2025",
       gpa: undefined,
       achievements: ["Database Management Systems","Networking", "Operating Systems", "Data Structures", "Algorithms"]
     },

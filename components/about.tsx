@@ -2,37 +2,37 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code, Palette, Zap, Users } from "lucide-react"
+import { FileCode, BarChart2, Gauge, Users } from "lucide-react"
 
 export function About() {
   const highlights = [
     {
-      icon: Code,
+      icon: FileCode,
       title: "Clean Code",
       description: "Writing maintainable, scalable, and efficient code",
     },
     {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Creating beautiful and intuitive user experiences",
+      icon: BarChart2,
+      title: "Data-Driven Development",
+      description: "Leveraging analytics and metrics to guide feature design and improvements.",
     },
     {
-      icon: Zap,
-      title: "Performance",
+      icon: Gauge,
+      title: "Performance Focus",
       description: "Optimizing applications for speed and efficiency",
     },
     {
       icon: Users,
-      title: "Collaboration",
-      description: "Working effectively in team environments",
+      title: "Team Player",
+      description: "Thriving in agile environments to deliver features fast.",
     },
   ]
 
   const stats = [
-    { number: "50+", label: "Projects Completed" },
-    { number: "3+", label: "Years Experience" },
-    { number: "20+", label: "Technologies" },
-    { number: "100%", label: "Client Satisfaction" },
+    { number: "10+", label: "Projects Completed" },
+    { number: "5+", label: "APIs launched in production" },
+    { number: "100+", label: "Automated test cases" },
+    { number: "3", label: "Interactive dashboards delivered" },
   ]
 
   return (
@@ -51,20 +51,20 @@ export function About() {
           {/* Content */}
           <div>
             <h3 className="text-2xl font-semibold mb-6 text-white">My Story</h3>
-            <div className="space-y-4 text-gray-300">
+            <div className="space-y-4 text-gray-300 text-justify">
               <p>
-                I'm a passionate full-stack developer with over 3 years of experience creating digital solutions that
-                make a difference. My journey began with a curiosity about how things work on the web, which quickly
-                evolved into a deep love for coding.
+                I'm a versatile full‑stack developer and data enthusiast who thrives on transforming ideas into robust digital experiences. With hands‑on expertise in Flask, Python, and modern web frameworks, I build clean, scalable APIs and data‑driven dashboards that help teams make smarter decisions. My passion lies at the intersection of development and data—whether I'm automating CI/CD pipelines with GitHub Actions or visualizing insights in Power BI, I'm driven to deliver reliable, high‑impact solutions.
               </p>
               <p>
-                I specialize in modern web technologies including React, Next.js, Node.js, and TypeScript. I believe in
-                writing clean, maintainable code and creating user experiences that are both beautiful and functional.
+                Since 2021, I've:
               </p>
-              <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                or sharing knowledge with the developer community.
-              </p>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Built and containerized Flask REST APIs with Docker</li>
+                <li>Tuned PostgreSQL databases for faster queries</li>
+                <li>Written comprehensive pytest suites for rock‑solid quality</li>
+                <li>Created interactive dashboards in Power BI and Python</li>
+                <li>Automated end‑to‑end CI/CD workflows, catching bugs early with Thunder Client tests</li>
+              </ul>
             </div>
 
             <div className="mt-8">
@@ -94,9 +94,9 @@ export function About() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="flex justify-between gap-8 overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="flex-1 min-w-[180px] text-center">
               <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
