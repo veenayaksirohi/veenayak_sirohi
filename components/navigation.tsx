@@ -63,7 +63,7 @@ export function Navigation() {
               onClick={() => scrollToSection("hero")}
               className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300"
             >
-              <img src="/veenayak-sirohi/profile-avatar.png" alt="Profile Avatar" width={32} height={32} className="rounded-full" />
+              <img src="/veenayak_sirohi/profile-avatar.png" alt="Profile Avatar" width={32} height={32} className="rounded-full" />
               <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Portfolio
               </span>

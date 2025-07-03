@@ -122,7 +122,7 @@ export function Hero() {
                 </Button>
               </a>
               <a
-                href="https://www.linkedin.com/in/veenayak-sirohi-ab30ab227/"
+                href="https://www.linkedin.com/in/veenayak_sirohi-ab30ab227/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -148,7 +148,7 @@ export function Hero() {
               <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-400 to-purple-400 p-1">
                 <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
                   <img
-                    src="/veenayak-sirohi/profile-avatar.png"
+                    src="/veenayak_sirohi/profile-avatar.png"
                     alt="Profile Avatar"
                     width={300}
                     height={300}
