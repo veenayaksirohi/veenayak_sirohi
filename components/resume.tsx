@@ -5,53 +5,46 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Download, ExternalLink, Calendar, MapPin } from "lucide-react"
 
-export function Resume() {
+function Resume() {
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "University of Technology",
-      location: "City, State",
-      period: "2018 - 2022",
-      gpa: "3.8/4.0",
-      achievements: ["Dean's List", "Computer Science Honor Society", "Outstanding Student Award"],
+      degree: "B.Tech - Computer Science Engineering",
+      school: "GL Bajaj Institute of Technology and Management",
+      location: "Uttar Pradesh, India",
+      period: "Nov 2021 - 2025",
+      gpa: undefined,
+      achievements: ["Database Management Systems","Networking", "Operating Systems", "Data Structures", "Algorithms"]
     },
     {
-      degree: "Full Stack Web Development Bootcamp",
-      school: "Tech Academy",
-      location: "Online",
-      period: "2022",
-      achievements: ["Top 5% of cohort", "Best Final Project Award"],
-    },
+      degree: "Schooling",
+      school: "Dewan Public School - India",
+      location: "Hapur, Uttar Pradesh, India",
+      period: "Apr 2007 - Mar 2021",
+      gpa: "80%",
+      achievements: []
+    }
   ]
 
   const experience = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Solutions Inc.",
-      location: "Remote",
-      period: "2023 - Present",
-      description: "Lead development of scalable web applications using React, Node.js, and cloud technologies.",
+      title: "Internship Trainee",
+      company: "Impressico Business Solutions",
+      location: "Noida, Uttar Pradesh, India",
+      period: "Apr 2025 - Jun 2025",
+      description: "Built REST APIs, optimized databases, automated testing, and streamlined DevOps as an intern at Impressico Business Solutions.",
       achievements: [
-        "Improved application performance by 40%",
-        "Led team of 5 developers",
-        "Implemented CI/CD pipelines",
+        "Developed and tested Flask-based REST APIs, improving bug detection and reducing manual QA time.",
+        "Optimized PostgreSQL queries, increasing data retrieval speed by 25%.",
+        "Automated CI/CD with Docker and GitHub Actions, enabling faster, error-free deployments."
       ],
-    },
-    {
-      title: "Frontend Developer",
-      company: "Digital Agency",
-      location: "City, State",
-      period: "2022 - 2023",
-      description: "Developed responsive web applications and collaborated with design teams.",
-      achievements: ["Built 15+ client websites", "Reduced load times by 30%", "Mentored junior developers"],
     },
   ]
 
   const skills = {
-    Frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"],
-    Backend: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB"],
-    Tools: ["Git", "Docker", "AWS", "Vercel", "Figma"],
-    "Soft Skills": ["Leadership", "Communication", "Problem Solving", "Team Work"],
+    Programming: ["Python", "Data Structures & Algorithms", "JavaScript", "HTML & CSS", "Flask","API Testing", "REST APIs"],
+    DataScience: ["Data Analysis", "Power BI", "SQL", "Data Visualization", "PostgreSQL"],
+    DevOps: ["Docker", "GitHub Actions", "CI/CD"],
+    Tools: ["Thunder Client", "Git", "GitHub"]
   }
 
   return (
@@ -78,10 +71,10 @@ export function Resume() {
           </a>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-16">
           {/* Education */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-semibold mb-6 text-white flex items-center">
+            <h3 className="text-2xl font-semibold mb-10 text-white flex items-center">
               <Calendar className="w-5 h-5 mr-2 text-blue-400" />
               Education
             </h3>
@@ -100,7 +93,7 @@ export function Resume() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    {edu.gpa && <p className="text-gray-300 mb-3">GPA: {edu.gpa}</p>}
+                    {edu.gpa && <p className="text-gray-300 mb-3">{edu.degree === "Schooling" ? `Grade: ${edu.gpa}` : `CGPA: ${edu.gpa}`}</p>}
                     <div className="flex flex-wrap gap-2">
                       {edu.achievements.map((achievement, i) => (
                         <Badge key={i} variant="secondary">
@@ -114,7 +107,7 @@ export function Resume() {
             </div>
 
             {/* Experience */}
-            <h3 className="text-2xl font-semibold mb-6 mt-12 text-white flex items-center">
+            <h3 className="text-2xl font-semibold mb-10 mt-16 text-white flex items-center">
               <ExternalLink className="w-5 h-5 mr-2 text-blue-400" />
               Experience
             </h3>
@@ -150,17 +143,17 @@ export function Resume() {
 
           {/* Skills */}
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-white">Skills</h3>
+            <h3 className="text-2xl font-semibold mb-10 text-white">Skills</h3>
             <div className="space-y-6">
               {Object.entries(skills).map(([category, skillList]) => (
                 <Card key={category} className="bg-gray-800 border-gray-700">
                   <CardHeader>
-                    <CardTitle className="text-lg text-white">{category}</CardTitle>
+                    <CardTitle className="text-lg text-white">{category.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
-                      {skillList.map((skill, index) => (
-                        <Badge key={index} variant="outline" className="border-blue-400 text-blue-400">
+                      {skillList.map((skill) => (
+                        <Badge key={skill} variant="outline" className="border-blue-400 text-blue-400">
                           {skill}
                         </Badge>
                       ))}
@@ -175,3 +168,5 @@ export function Resume() {
     </section>
   )
 }
+
+export default Resume;

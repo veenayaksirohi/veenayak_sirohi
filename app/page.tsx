@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
-import { Resume } from "@/components/resume"
+import Resume from "@/components/resume"
 import { Work } from "@/components/work"
 import { Skills } from "@/components/skills"
 import { Projects } from "@/components/projects"
