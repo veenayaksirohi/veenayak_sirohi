@@ -17,7 +17,7 @@ export function Certifications() {
       credentialId: "NPTEL24CS45S558604431",
       description: "Successfully completed the NPTEL course 'Programming, Data Structures and Algorithms using Python' with a consolidated score of 56%.",
       skills: ["Python", "Data Structures", "Algorithms", "Programming"],
-      verificationUrl: "/veenayak-sirohi/certificate_img/Programming, Data Structures And Algorithms Using Python_page1.jpg",
+      verificationUrl: "/veenayak_sirohi/certificate_img/Programming, Data Structures And Algorithms Using Python_page1.jpg",
       logo: "/veenayak-sirohi/nptel.jpg",
       status: "active",
       level: "Certification",
