@@ -8,7 +8,7 @@ export function Footer() {
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/veenayaksirohi", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/veenayak_sirohi-ab30ab227/", label: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/veenayak-sirohi-ab30ab227/", label: "LinkedIn" },
     { icon: Mail, href: "mailto:veenayaksirohi@gmail.com", label: "Email" },
   ]
 

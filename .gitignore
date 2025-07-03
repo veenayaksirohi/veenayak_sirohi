@@ -24,6 +24,10 @@ pnpm-debug.log*
 # Environment variables
 .env*
 !.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # TypeScript
 *.tsbuildinfo
@@ -40,3 +44,26 @@ Thumbs.db
 
 # Misc
 *.local
+
+# Coverage directory
+coverage/
+
+# Optional: Mac system files
+Icon?
+
+# Optional: Windows system files
+Desktop.ini
+
+# Optional: Linux system files
+*~
+
+# Ignore next.config.js backup files
+next.config.js.backup*
+
+# Ignore lock files (optional, if you use only one package manager)
+# package-lock.json
+yarn.lock
+# pnpm-lock.yaml
+
+# Ignore contract.txt
+contract.txt

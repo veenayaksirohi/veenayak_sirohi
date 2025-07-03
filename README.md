@@ -24,6 +24,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 - [Personal Portfolio Website 🚀](#personal-portfolio-website-)
   - [📦 Repository](#-repository)
   - [📑 Table of Contents](#-table-of-contents)
+  - [📁 Repository Structure](#-repository-structure)
   - [✨ Features](#-features)
   - [🛠️ Tech Stack](#️-tech-stack)
   - [🚦 Getting Started](#-getting-started)
@@ -45,6 +46,42 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
   - [🤝 Contributing](#-contributing)
   - [💬 Support](#-support)
   - [🙏 Acknowledgments](#-acknowledgments)
+
+---
+
+## 📁 Repository Structure
+
+```
+veenayak_sirohi/
+  ├── app/
+  ├── components/
+  │     ├── about.tsx
+  │     ├── certifications.tsx
+  │     ├── contact.tsx
+  │     ├── experience.tsx
+  │     ├── footer.tsx
+  │     ├── hero.tsx
+  │     ├── navigation.tsx
+  │     ├── projects.tsx
+  │     ├── resume.tsx
+  │     ├── skills.tsx
+  │     ├── theme-provider.tsx
+  │     └── ui/
+  ├── hooks/
+  ├── lib/
+  ├── public/
+  │     ├── certificate_img/
+  │     ├── profile-avatar.png
+  │     ├── veenayak_Resume.pdf
+  │     └── ...
+  ├── styles/
+  ├── package.json
+  ├── next.config.js
+  ├── tailwind.config.ts
+  ├── tsconfig.json
+  ├── README.md
+  └── ...
+```
 
 ---
 
@@ -199,7 +236,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/veenayaksirohi/portfolio-website/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/veenayaksirohi/veenayak_sirohi/issues).
 
 ## 💬 Support
 
