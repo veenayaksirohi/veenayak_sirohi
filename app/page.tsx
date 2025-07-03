@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
-import Resume from "@/components/resume"
+import Education from "@/components/education"
 import { Work } from "@/components/work"
 import { Skills } from "@/components/skills"
 import { Projects } from "@/components/projects"
@@ -17,7 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Resume />
+        <Education />
         <Work />
         <Skills />
         <Projects />

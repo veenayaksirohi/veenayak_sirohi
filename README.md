@@ -1,5 +1,7 @@
 # Personal Portfolio Website 🚀
 
+[🌐 **Live Website**](https://veenayaksirohi.github.io/veenayak_sirohi/)
+
 ![Next.js](https://img.shields.io/badge/Next.js-14-blue?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-4.x-blue?logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38bdf8?logo=tailwindcss&logoColor=white)

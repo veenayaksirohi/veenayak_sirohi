@@ -13,7 +13,7 @@ export function Navigation() {
   const navItems = [
     { id: "hero", label: "Home" },
     { id: "about", label: "About" },
-    { id: "resume", label: "Resume" },
+    { id: "education", label: "Education" },
     { id: "work", label: "Experience" },
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
