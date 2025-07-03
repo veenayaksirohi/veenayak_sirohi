@@ -17,13 +17,27 @@ export function Certifications() {
       credentialId: "NPTEL24CS45S558604431",
       description: "Successfully completed the NPTEL course 'Programming, Data Structures and Algorithms using Python' with a consolidated score of 56%.",
       skills: ["Python", "Data Structures", "Algorithms", "Programming"],
-      verificationUrl: "https://nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS45S558604431",
-      logo: "/Programming, Data Structures And Algorithms Using Python_page1.jpg",
+      verificationUrl: "/certificate_img/Programming, Data Structures And Algorithms Using Python_page1.jpg",
+      logo: "/nptel.jpg",
       status: "active",
       level: "Certification",
     },
     {
       id: 2,
+      title: "What is Data Science?",
+      issuer: "IBM (Coursera)",
+      issueDate: "Nov 8, 2023",
+      expiryDate: null,
+      credentialId: "A7V55A58EYV4",
+      description: "Successfully completed the IBM online non-credit course 'What is Data Science?' offered through Coursera.",
+      skills: ["Data Science", "IBM", "Coursera", "Foundations"],
+      verificationUrl: "/certificate_img/Coursera A7V55A58EYV4_page1.jpg",
+      logo: "/blueCoursera-646f855eae3d677239ea9db93d6c9e17.svg",
+      status: "active",
+      level: "Course Certificate",
+    },
+    {
+      id: 3,
       title: "Google Cloud Professional Cloud Developer",
       issuer: "Google Cloud",
       issueDate: "January 2023",
@@ -38,7 +52,7 @@ export function Certifications() {
       level: "Professional",
     },
     {
-      id: 3,
+      id: 4,
       title: "MongoDB Certified Developer Associate",
       issuer: "MongoDB University",
       issueDate: "November 2022",
@@ -52,7 +66,7 @@ export function Certifications() {
       level: "Associate",
     },
     {
-      id: 4,
+      id: 5,
       title: "Certified Scrum Master (CSM)",
       issuer: "Scrum Alliance",
       issueDate: "September 2022",
@@ -66,7 +80,7 @@ export function Certifications() {
       level: "Professional",
     },
     {
-      id: 5,
+      id: 6,
       title: "Meta Front-End Developer Professional Certificate",
       issuer: "Meta (Facebook)",
       issueDate: "August 2022",
@@ -80,7 +94,7 @@ export function Certifications() {
       level: "Professional Certificate",
     },
     {
-      id: 6,
+      id: 7,
       title: "Docker Certified Associate (DCA)",
       issuer: "Docker Inc.",
       issueDate: "June 2022",
@@ -199,14 +213,21 @@ export function Certifications() {
                 <div className="text-xs text-gray-500">Credential ID: {cert.credentialId}</div>
 
                 {/* Verification Button */}
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="w-full border-gray-600 text-gray-300 hover:bg-gray-700 bg-transparent"
+                <a
+                  href={cert.verificationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
                 >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  Verify Credential
-                </Button>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="w-full border-gray-600 text-gray-300 hover:bg-gray-700 bg-transparent"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Verify Credential
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}
