@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const repo = "veenayak-sirohi"; // <-- your repo name
+const isGithubPages = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
   output: "export",
@@ -22,8 +23,8 @@ const nextConfig = {
     ],
   },
   // Configure for GitHub Pages deployment
-  basePath: process.env.NODE_ENV === "production" ? `/${repo}` : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? `/${repo}/` : "",
+  basePath: isGithubPages ? '/veenayak_sirohi' : '',
+  assetPrefix: isGithubPages ? '/veenayak_sirohi/' : '',
 
   // Performance optimizations
   experimental: {
