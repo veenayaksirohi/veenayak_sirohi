@@ -167,7 +167,7 @@ Update the following files with your information:
 ## 📷 Sample Image
 
 <p align="center">
-  <img width="300" height="300" src="public/profile-avatar.png" alt="Profile Avatar">
+  <img width="300" height="300" src="/veenayak_sirohi/profile-avatar.png" alt="Profile Avatar">
 </p>
 
 ## 📱 Responsive Design
