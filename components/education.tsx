@@ -5,14 +5,11 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Download, Calendar, MapPin } from "lucide-react"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
+
+// Use the same basePath as in next.config.js for GitHub Pages
+const basePath = process.env.NODE_ENV === 'production' ? '/veenayak_sirohi' : '';
 
 function Education() {
-  // Get the basePath from the current pathname (works for static export and GitHub Pages)
-  const pathname = usePathname();
-  // If deployed to a subpath, e.g. /veenayak_sirohi, extract it
-  const basePath = typeof window !== 'undefined' ? window.location.pathname.replace(/\/[^/]*$/, '') : '';
-
   const education = [
     {
       degree: "B.Tech - Computer Science Engineering",
@@ -46,7 +43,7 @@ function Education() {
             A comprehensive overview of my academic background and achievements
           </p>
           <a
-            href="/veenayak_sirohi/veenayak_Resume.pdf"
+            href={`${basePath}/veenayak_Resume.pdf`}
             download
             target="_blank"
             rel="noopener noreferrer"
