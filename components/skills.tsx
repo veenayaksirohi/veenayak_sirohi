@@ -3,44 +3,33 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
-import { Code, Palette, Server, Database, Cloud, Wrench } from "lucide-react"
+import { Code, Palette, Server, Database, Cloud, Users } from "lucide-react"
+import React, { useState } from "react"
 
 export function Skills() {
   const skillCategories = [
     {
-      icon: Code,
-      title: "Frontend Development",
+      icon: Database,
+      title: "Data Science & Analytics",
       color: "text-blue-400",
       skills: [
-        { name: "React/Next.js", level: 95, description: "Advanced component architecture and SSR" },
-        { name: "TypeScript", level: 90, description: "Type-safe development and advanced patterns" },
-        { name: "JavaScript (ES6+)", level: 95, description: "Modern JS features and best practices" },
-        { name: "HTML5/CSS3", level: 90, description: "Semantic markup and modern CSS" },
-        { name: "Tailwind CSS", level: 85, description: "Utility-first CSS framework" },
-        { name: "Vue.js", level: 75, description: "Component-based development" },
+        { name: "Data Analysis", level: 90, description: "Extracting insights and trends from complex datasets." },
+        { name: "Microsoft Power BI", level: 85, description: "Creating interactive dashboards and data visualizations." },
+        { name: "SQL", level: 85, description: "Querying and manipulating data in relational databases like MySQL & PostgreSQL." },
+        { name: "ETL Pipelines", level: 80, description: "Building data pipelines for extraction, transformation, and loading." },
+        { name: "Data Cleaning", level: 90, description: "Processing and preparing raw data for analysis." },
+        { name: "Microsoft Excel", level: 80, description: "Using pivot tables, graphs, and functions for data analysis." },
       ],
     },
     {
       icon: Server,
-      title: "Backend Development",
+      title: "Backend & Databases",
       color: "text-green-400",
       skills: [
-        { name: "Node.js", level: 90, description: "Server-side JavaScript and APIs" },
-        { name: "Express.js", level: 85, description: "RESTful API development" },
-        { name: "Python", level: 80, description: "Django and Flask frameworks" },
-        { name: "GraphQL", level: 75, description: "Query language and runtime" },
-        { name: "REST APIs", level: 90, description: "API design and implementation" },
-      ],
-    },
-    {
-      icon: Database,
-      title: "Database & Storage",
-      color: "text-purple-400",
-      skills: [
-        { name: "PostgreSQL", level: 85, description: "Relational database design and optimization" },
-        { name: "MongoDB", level: 80, description: "NoSQL database and aggregation" },
-        { name: "Redis", level: 70, description: "Caching and session management" },
-        { name: "Prisma", level: 75, description: "Database ORM and migrations" },
+        { name: "Python (Flask)", level: 85, description: "Developing web applications and microservices with Flask." },
+        { name: "REST APIs", level: 90, description: "Designing, building, and testing robust RESTful APIs." },
+        { name: "RDBMS", level: 85, description: "Working with relational databases like PostgreSQL and MySQL." },
+        { name: "API Testing", level: 80, description: "Utilizing tools like Thunder Client for API validation." },
       ],
     },
     {
@@ -48,42 +37,49 @@ export function Skills() {
       title: "Cloud & DevOps",
       color: "text-orange-400",
       skills: [
-        { name: "AWS", level: 80, description: "EC2, S3, Lambda, RDS" },
-        { name: "Docker", level: 85, description: "Containerization and orchestration" },
-        { name: "Vercel", level: 90, description: "Deployment and hosting" },
-        { name: "GitHub Actions", level: 75, description: "CI/CD pipelines" },
+        { name: "Amazon Web Services (AWS)", level: 75, description: "Experience with core services like EC2 and S3 for cloud computing." },
+        { name: "Docker", level: 80, description: "Containerizing applications for consistent and scalable deployment." },
+        { name: "Git & GitHub", level: 90, description: "Proficient in version control and collaborative development workflows." },
+        { name: "CI/CD (GitHub Actions)", level: 80, description: "Automating build, test, and deployment pipelines." },
       ],
     },
     {
-      icon: Wrench,
-      title: "Tools & Workflow",
-      color: "text-yellow-400",
+      icon: Code,
+      title: "Programming & Web",
+      color: "text-purple-400",
       skills: [
-        { name: "Git", level: 95, description: "Version control and collaboration" },
-        { name: "VS Code", level: 90, description: "Development environment setup" },
-        { name: "Figma", level: 75, description: "Design collaboration and prototyping" },
-        { name: "Jest/Testing", level: 80, description: "Unit and integration testing" },
+        { name: "Python", level: 90, description: "Extensive experience in programming and data analysis." },
+        { name: "Data Structures & Algorithms", level: 85, description: "Applying core CS concepts for efficient problem-solving." },
+        { name: "HTML & CSS", level: 80, description: "Building the structure and style of modern web pages." },
+        { name: "JavaScript", level: 75, description: "Client-side scripting for interactive web experiences." },
       ],
     },
     {
       icon: Palette,
-      title: "Soft Skills",
+      title: "Professional & Soft Skills",
       color: "text-pink-400",
       skills: [
-        { name: "Problem Solving", level: 95, description: "Analytical thinking and debugging" },
-        { name: "Team Leadership", level: 85, description: "Mentoring and project management" },
-        { name: "Communication", level: 90, description: "Technical writing and presentations" },
-        { name: "Agile/Scrum", level: 80, description: "Agile methodologies and sprint planning" },
+        { name: "Analytical Skills", level: 95, description: "Analyzing complex problems to devise effective solutions." },
+        { name: "Attention to Detail", level: 90, description: "Meticulous approach to data and development tasks." },
+        { name: "Adaptability", level: 85, description: "Quickly learning and applying new technologies and knowledge." },
+        { name: "Problem Solving", level: 90, description: "Debugging and resolving technical challenges efficiently." },
       ],
     },
   ]
 
-  const certifications = [
-    "AWS Certified Developer",
-    "Google Cloud Professional",
-    "MongoDB Certified Developer",
-    "Scrum Master Certified",
-  ]
+  // Sliding window state
+  const windowSize = 2;
+  const [windowStart, setWindowStart] = useState(0);
+  const windowEnd = windowStart + windowSize;
+  const canGoPrev = windowStart > 0;
+  const canGoNext = windowEnd < skillCategories.length;
+
+  const handlePrev = () => {
+    if (canGoPrev) setWindowStart(windowStart - 1);
+  };
+  const handleNext = () => {
+    if (canGoNext) setWindowStart(windowStart + 1);
+  };
 
   return (
     <section id="skills" className="py-20">
@@ -100,9 +96,32 @@ export function Skills() {
           </p>
         </div>
 
+        {/* Sliding Window Controls (Top) */}
+        <div className="flex justify-center items-center mb-8 gap-4">
+          <button
+            onClick={handlePrev}
+            disabled={!canGoPrev}
+            className={`px-4 py-2 rounded bg-gray-700 text-white font-bold transition-colors ${canGoPrev ? 'hover:bg-blue-500' : 'opacity-50 cursor-not-allowed'}`}
+            aria-label="Previous"
+          >
+            &#8592; Prev
+          </button>
+          <span className="text-gray-400">
+            {windowStart + 1} - {Math.min(windowEnd, skillCategories.length)} of {skillCategories.length}
+          </span>
+          <button
+            onClick={handleNext}
+            disabled={!canGoNext}
+            className={`px-4 py-2 rounded bg-gray-700 text-white font-bold transition-colors ${canGoNext ? 'hover:bg-blue-500' : 'opacity-50 cursor-not-allowed'}`}
+            aria-label="Next"
+          >
+            Next &#8594;
+          </button>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {skillCategories.map((category, index) => (
-            <Card key={index} className="bg-gray-800 border-gray-700">
+          {skillCategories.slice(windowStart, windowEnd).map((category, index) => (
+            <Card key={windowStart + index} className="bg-gray-800 border-gray-700">
               <CardHeader>
                 <CardTitle className="flex items-center text-white">
                   <category.icon className={`w-6 h-6 mr-3 ${category.color}`} />
@@ -125,16 +144,27 @@ export function Skills() {
           ))}
         </div>
 
-        {/* Certifications */}
-        <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-8 text-white">Certifications</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {certifications.map((cert, index) => (
-              <Badge key={index} variant="outline" className="border-blue-400 text-blue-400 px-4 py-2">
-                {cert}
-              </Badge>
-            ))}
-          </div>
+        {/* Sliding Window Controls (Bottom) */}
+        <div className="flex justify-center items-center mb-8 gap-4">
+          <button
+            onClick={handlePrev}
+            disabled={!canGoPrev}
+            className={`px-4 py-2 rounded bg-gray-700 text-white font-bold transition-colors ${canGoPrev ? 'hover:bg-blue-500' : 'opacity-50 cursor-not-allowed'}`}
+            aria-label="Previous"
+          >
+            &#8592; Prev
+          </button>
+          <span className="text-gray-400">
+            {windowStart + 1} - {Math.min(windowEnd, skillCategories.length)} of {skillCategories.length}
+          </span>
+          <button
+            onClick={handleNext}
+            disabled={!canGoNext}
+            className={`px-4 py-2 rounded bg-gray-700 text-white font-bold transition-colors ${canGoNext ? 'hover:bg-blue-500' : 'opacity-50 cursor-not-allowed'}`}
+            aria-label="Next"
+          >
+            Next &#8594;
+          </button>
         </div>
       </div>
     </section>
