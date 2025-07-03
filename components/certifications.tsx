@@ -38,6 +38,20 @@ export function Certifications() {
     },
     {
       id: 3,
+      title: "Data Science Methodology",
+      issuer: "IBM (Coursera)",
+      issueDate: "Nov 18, 2023",
+      expiryDate: null,
+      credentialId: "F4EYNFARXCLT",
+      description: "Successfully completed the IBM online non-credit course 'Data Science Methodology' offered through Coursera.",
+      skills: ["Data Science", "Methodology", "IBM", "Coursera"],
+      verificationUrl: "/certificate_img/Coursera F4EYNFARXCLT_page1.jpg",
+      logo: "/blueCoursera-646f855eae3d677239ea9db93d6c9e17.svg",
+      status: "active",
+      level: "Course Certificate",
+    },
+    {
+      id: 4,
       title: "Google Cloud Professional Cloud Developer",
       issuer: "Google Cloud",
       issueDate: "January 2023",
@@ -52,7 +66,7 @@ export function Certifications() {
       level: "Professional",
     },
     {
-      id: 4,
+      id: 5,
       title: "MongoDB Certified Developer Associate",
       issuer: "MongoDB University",
       issueDate: "November 2022",
@@ -66,7 +80,7 @@ export function Certifications() {
       level: "Associate",
     },
     {
-      id: 5,
+      id: 6,
       title: "Certified Scrum Master (CSM)",
       issuer: "Scrum Alliance",
       issueDate: "September 2022",
@@ -80,7 +94,7 @@ export function Certifications() {
       level: "Professional",
     },
     {
-      id: 6,
+      id: 7,
       title: "Meta Front-End Developer Professional Certificate",
       issuer: "Meta (Facebook)",
       issueDate: "August 2022",
@@ -94,7 +108,7 @@ export function Certifications() {
       level: "Professional Certificate",
     },
     {
-      id: 7,
+      id: 8,
       title: "Docker Certified Associate (DCA)",
       issuer: "Docker Inc.",
       issueDate: "June 2022",
