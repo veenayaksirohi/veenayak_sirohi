@@ -91,13 +91,20 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button
-              size="sm"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+            <a
+              href="/veenayak_sirohi/veenayak_Resume.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Download className="w-4 h-4 mr-2" />
-              Resume
-            </Button>
+              <Button
+                size="sm"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Resume
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -126,13 +133,20 @@ export function Navigation() {
                 </button>
               ))}
               <div className="pt-2">
-                <Button
-                  size="sm"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                <a
+                  href="/veenayak_sirohi/veenayak_Resume.pdf"
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Resume
-                </Button>
+                  <Button
+                    size="sm"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download Resume
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

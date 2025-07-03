@@ -65,10 +65,17 @@ export function Resume() {
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
             A comprehensive overview of my education, experience, and skills
           </p>
-          <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-            <Download className="w-4 h-4 mr-2" />
-            Download PDF Resume
-          </Button>
+          <a
+            href="/veenayak_sirohi/veenayak_Resume.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+              <Download className="w-4 h-4 mr-2" />
+              Download PDF Resume
+            </Button>
+          </a>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">

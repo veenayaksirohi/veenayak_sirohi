@@ -97,7 +97,7 @@ export function Hero() {
                 <ArrowDown className="ml-2 w-4 h-4" />
               </Button>
               <a
-                href="/veenayak_Resume.pdf"
+                href="/veenayak_sirohi/veenayak_Resume.pdf"
                 download
                 target="_blank"
                 rel="noopener noreferrer"
