@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Twitter, Mail, Heart, ArrowUp } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -30,6 +31,8 @@ export function Footer() {
     }
   }
 
+  const basePath = process.env.NODE_ENV === 'production' ? '/veenayak_sirohi' : '';
+
   return (
     <footer className="bg-gray-900 border-t border-gray-800">
       <div className="container mx-auto px-6 py-12">
@@ -37,7 +40,13 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg"></div>
+              <Image
+                src={basePath + '/profile-avatar.png'}
+                alt="Profile Avatar"
+                width={32}
+                height={32}
+                className="rounded-full object-cover"
+              />
               <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Veenayak Sirohi
               </span>
