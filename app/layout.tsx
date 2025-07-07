@@ -31,7 +31,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  generator: 'Next.js, Tailwind CSS, shadcn/ui, Lucide'
+  generator: 'Next.js, Tailwind CSS, shadcn/ui, Lucide',
+  icons: [
+    { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/veenayak_sirohi/favicon.png' },
+    { rel: 'icon', type: 'image/png', sizes: '192x192', url: '/veenayak_sirohi/icon.png' },
+    // You can add more sizes if you have them
+  ],
 }
 
 export default function RootLayout({
