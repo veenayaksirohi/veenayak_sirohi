@@ -6,25 +6,19 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Your Name - Full Stack Developer Portfolio",
+  title: "Veenayak Sirohi - Portfolio",
   description:
-    "Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies. View my projects, skills, and experience.",
-  keywords: "full stack developer, react, next.js, node.js, typescript, web development, portfolio",
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
+    "A modern, responsive portfolio website for Veenayak Sirohi. Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies. View projects, skills, certifications, and experience.",
+  keywords: "Veenayak Sirohi, portfolio, full stack developer, react, next.js, node.js, typescript, web development, projects, skills, certifications, resume, github, linkedin",
+  authors: [{ name: "Veenayak Sirohi", url: "https://www.linkedin.com/in/veenayak-sirohi-ab30ab227" }],
+  creator: "Veenayak Sirohi",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourportfolio.com",
-    title: "Your Name - Full Stack Developer Portfolio",
-    description: "Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
-    siteName: "Your Name Portfolio",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Your Name - Full Stack Developer Portfolio",
-    description: "Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
-    creator: "@yourusername",
+    url: "https://veenayaksirohi.github.io/veenayak_sirohi/",
+    title: "Veenayak Sirohi - Portfolio",
+    description: "A modern, responsive portfolio website for Veenayak Sirohi. Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
+    siteName: "Veenayak Sirohi Portfolio",
   },
   robots: {
     index: true,
@@ -37,7 +31,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.dev'
+  generator: 'Next.js, Tailwind CSS, shadcn/ui, Lucide'
 }
 
 export default function RootLayout({

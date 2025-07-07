@@ -10,6 +10,10 @@ import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { BackToTop } from "@/components/back-to-top"
 
+export const metadata = {
+  title: "Veenayak Sirohi - Portfolio"
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
