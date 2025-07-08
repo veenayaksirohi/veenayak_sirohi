@@ -2,44 +2,33 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react"
+import emailjs from "@emailjs/browser"
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const formRef = useRef<HTMLFormElement>(null)
+  const [status, setStatus] = useState<"idle"|"sending"|"sent"|"error">("idle")
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simulate form submission
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-      setSubmitStatus("success")
-      setFormData({ name: "", email: "", subject: "", message: "" })
-    } catch (error) {
-      setSubmitStatus("error")
-    } finally {
-      setIsSubmitting(false)
-      setTimeout(() => setSubmitStatus("idle"), 5000)
-    }
+    setStatus("sending")
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formRef.current!,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      )
+      .then(
+        () => { setStatus("sent"); formRef.current?.reset() },
+        () => { setStatus("error") }
+      )
   }
 
   const contactInfo = [
@@ -105,7 +94,7 @@ export function Contact() {
               <CardTitle className="text-white">Send Me a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name" className="text-gray-300">
@@ -114,8 +103,6 @@ export function Contact() {
                     <Input
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
                       required
                       className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
                       placeholder="Veenayak Sirohi"
@@ -129,8 +116,6 @@ export function Contact() {
                       id="email"
                       name="email"
                       type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
                       required
                       className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
                       placeholder="veenayaksirohi@gmail.com"
@@ -139,14 +124,12 @@ export function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="subject" className="text-gray-300">
+                  <Label htmlFor="title" className="text-gray-300">
                     Subject
                   </Label>
                   <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
+                    id="title"
+                    name="title"
                     required
                     className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
                     placeholder="What's this about?"
@@ -160,8 +143,6 @@ export function Contact() {
                   <Textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
                     required
                     rows={6}
                     className="bg-gray-700 border-gray-600 text-white focus:border-blue-400 resize-none"
@@ -171,30 +152,13 @@ export function Contact() {
 
                 <Button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={status === "sending"}
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:opacity-50"
                 >
-                  {isSubmitting ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4 mr-2" />
-                      Send Message
-                    </>
-                  )}
+                  {status === "sending" ? "Sending…" : "Send Message"}
                 </Button>
-
-                {submitStatus === "success" && (
-                  <div className="text-green-400 text-center">
-                    Message sent successfully! I'll get back to you soon.
-                  </div>
-                )}
-
-                {submitStatus === "error" && (
-                  <div className="text-red-400 text-center">
-                    Failed to send message. Please try again or contact me directly.
-                  </div>
-                )}
+                {status === "sent" && <p className="text-green-400 text-center">Sent!</p>}
+                {status === "error" && <p className="text-red-400 text-center">Error sending.</p>}
               </form>
             </CardContent>
           </Card>

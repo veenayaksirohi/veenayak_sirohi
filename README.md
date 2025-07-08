@@ -113,11 +113,11 @@ veenayak_sirohi/
 - Git
 
 ### Installation
-```bash
-git clone https://github.com/veenayaksirohi/veenayak_sirohi.git
-cd veenayak_sirohi
-npm install
-```
+   ```bash
+   git clone https://github.com/veenayaksirohi/veenayak_sirohi.git
+   cd veenayak_sirohi
+   npm install
+   ```
 
 ### Development
 ```bash
