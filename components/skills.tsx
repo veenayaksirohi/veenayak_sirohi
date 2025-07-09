@@ -82,16 +82,16 @@ export function Skills() {
   };
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 bg-deep-black/90">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Skills &{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
               Expertise
             </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-light-grey max-w-2xl mx-auto">
             A comprehensive overview of my technical skills and professional competencies
           </p>
         </div>
@@ -101,18 +101,18 @@ export function Skills() {
           <button
             onClick={handlePrev}
             disabled={!canGoPrev}
-            className={`px-4 py-2 rounded bg-gray-700 text-white font-bold transition-colors ${canGoPrev ? 'hover:bg-blue-500' : 'opacity-50 cursor-not-allowed'}`}
+            className={`px-4 py-2 rounded bg-fuscous-grey text-white font-bold transition-colors ${canGoPrev ? 'hover:bg-orange-red' : 'opacity-50 cursor-not-allowed'}`}
             aria-label="Previous"
           >
             &#8592; Prev
           </button>
-          <span className="text-gray-400">
+          <span className="text-light-grey">
             {windowStart + 1} - {Math.min(windowEnd, skillCategories.length)} of {skillCategories.length}
           </span>
           <button
             onClick={handleNext}
             disabled={!canGoNext}
-            className={`px-4 py-2 rounded bg-gray-700 text-white font-bold transition-colors ${canGoNext ? 'hover:bg-blue-500' : 'opacity-50 cursor-not-allowed'}`}
+            className={`px-4 py-2 rounded bg-fuscous-grey text-white font-bold transition-colors ${canGoNext ? 'hover:bg-orange-red' : 'opacity-50 cursor-not-allowed'}`}
             aria-label="Next"
           >
             Next &#8594;
@@ -121,10 +121,10 @@ export function Skills() {
 
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {skillCategories.slice(windowStart, windowEnd).map((category, index) => (
-            <Card key={windowStart + index} className="bg-gray-800 border-gray-700">
+            <Card key={windowStart + index} className="bg-fuscous-grey border-fuscous-grey">
               <CardHeader>
                 <CardTitle className="flex items-center text-white">
-                  <category.icon className={`w-6 h-6 mr-3 ${category.color}`} />
+                  <category.icon className={`w-6 h-6 mr-3 text-orange-red`} />
                   {category.title}
                 </CardTitle>
               </CardHeader>
@@ -133,10 +133,10 @@ export function Skills() {
                   <div key={skillIndex} className="space-y-2">
                     <div className="flex justify-between items-center">
                       <span className="font-medium text-white">{skill.name}</span>
-                      <span className="text-sm text-gray-400">{skill.level}%</span>
+                      <span className="text-sm text-light-grey">{skill.level}%</span>
                     </div>
                     <Progress value={skill.level} className="h-2" />
-                    <p className="text-sm text-gray-400">{skill.description}</p>
+                    <p className="text-sm text-light-grey">{skill.description}</p>
                   </div>
                 ))}
               </CardContent>
@@ -149,18 +149,18 @@ export function Skills() {
           <button
             onClick={handlePrev}
             disabled={!canGoPrev}
-            className={`px-4 py-2 rounded bg-gray-700 text-white font-bold transition-colors ${canGoPrev ? 'hover:bg-blue-500' : 'opacity-50 cursor-not-allowed'}`}
+            className={`px-4 py-2 rounded bg-fuscous-grey text-white font-bold transition-colors ${canGoPrev ? 'hover:bg-orange-red' : 'opacity-50 cursor-not-allowed'}`}
             aria-label="Previous"
           >
             &#8592; Prev
           </button>
-          <span className="text-gray-400">
+          <span className="text-light-grey">
             {windowStart + 1} - {Math.min(windowEnd, skillCategories.length)} of {skillCategories.length}
           </span>
           <button
             onClick={handleNext}
             disabled={!canGoNext}
-            className={`px-4 py-2 rounded bg-gray-700 text-white font-bold transition-colors ${canGoNext ? 'hover:bg-blue-500' : 'opacity-50 cursor-not-allowed'}`}
+            className={`px-4 py-2 rounded bg-fuscous-grey text-white font-bold transition-colors ${canGoNext ? 'hover:bg-orange-red' : 'opacity-50 cursor-not-allowed'}`}
             aria-label="Next"
           >
             Next &#8594;

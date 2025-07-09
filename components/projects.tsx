@@ -151,14 +151,14 @@ export function Projects() {
   const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.category === filter)
 
   return (
-    <section id="projects" className="py-20 bg-gray-800/50">
+    <section id="projects" className="py-20 bg-deep-black/90">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             My{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Projects</span>
+            <span className="bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">Projects</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-light-grey max-w-2xl mx-auto mb-8">
             A showcase of my recent work and personal projects that demonstrate my skills and creativity
           </p>
 
@@ -171,8 +171,8 @@ export function Projects() {
                 onClick={() => setFilter(category.id)}
                 className={
                   filter === category.id
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600"
-                    : "border-gray-600 text-gray-300 hover:bg-gray-800"
+                    ? "bg-orange-red hover:bg-orange-red/90 text-white"
+                    : "border-fuscous-grey text-light-grey hover:bg-fuscous-grey"
                 }
               >
                 <Filter className="w-4 h-4 mr-2" />
@@ -186,7 +186,7 @@ export function Projects() {
           {filteredProjects.map((project) => (
             <Card
               key={project.id}
-              className="bg-gray-800 border-gray-700 hover:border-blue-500/50 transition-all duration-300 group"
+              className="bg-fuscous-grey border-fuscous-grey hover:border-orange-red/50 transition-all duration-300 group"
             >
               <div className="relative overflow-hidden">
                 <Image
@@ -199,7 +199,7 @@ export function Projects() {
                 <div className="absolute top-4 right-4">
                   <Badge
                     variant={project.status === "completed" ? "default" : "secondary"}
-                    className={project.status === "completed" ? "bg-green-600" : "bg-yellow-600"}
+                    className={project.status === "completed" ? "bg-green-600" : "bg-orange-red/80 text-white"}
                   >
                     {project.status === "completed" ? "Completed" : "In Progress"}
                   </Badge>
@@ -207,17 +207,17 @@ export function Projects() {
               </div>
 
               <CardHeader>
-                <CardTitle className="text-white group-hover:text-blue-400 transition-colors">
+                <CardTitle className="text-white group-hover:text-orange-red transition-colors">
                   {project.title}
                 </CardTitle>
-                <p className="text-gray-400 text-sm">{project.description}</p>
+                <p className="text-light-grey text-sm">{project.description}</p>
               </CardHeader>
 
               <CardContent className="space-y-4">
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, index) => (
-                    <Badge key={index} variant="secondary" className="text-xs">
+                    <Badge key={index} variant="secondary" className="text-xs bg-deep-black text-light-grey border-fuscous-grey">
                       {tech}
                     </Badge>
                   ))}
@@ -226,10 +226,10 @@ export function Projects() {
                 {/* Key Features */}
                 <div>
                   <h4 className="font-semibold text-white mb-2">Key Features:</h4>
-                  <ul className="text-sm text-gray-400 space-y-1">
+                  <ul className="text-sm text-light-grey space-y-1">
                     {project.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-2 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-orange-red rounded-full mt-2 mr-2 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
@@ -241,7 +241,7 @@ export function Projects() {
                   {project.liveUrl && (
                     <Button
                       size="sm"
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                      className="flex-1 bg-orange-red hover:bg-orange-red/90 text-white"
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Live Demo
@@ -250,7 +250,7 @@ export function Projects() {
                   <Button
                     size="sm"
                     variant="outline"
-                    className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-700 bg-transparent"
+                    className="flex-1 border-fuscous-grey text-light-grey hover:bg-fuscous-grey bg-transparent"
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
@@ -263,7 +263,7 @@ export function Projects() {
 
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-400">No projects found for the selected category.</p>
+            <p className="text-light-grey">No projects found for the selected category.</p>
           </div>
         )}
       </div>
