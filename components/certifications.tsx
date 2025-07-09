@@ -224,7 +224,7 @@ export function Certifications() {
                 </div>
 
                 {/* Credential ID */}
-                <div className="text-xs text-fuscous-grey">Credential ID: {cert.credentialId}</div>
+                <div className="text-xs text-neutral-300">Credential ID: {cert.credentialId}</div>
 
                 {/* Verification Button */}
                 <a

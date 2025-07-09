@@ -81,7 +81,7 @@ function Education() {
                 {edu.achievements.length > 0 && (
                   <div className="flex flex-wrap gap-2">
                     {edu.achievements.map((achievement, i) => (
-                      <Badge key={i} variant="secondary" className="bg-orange-500 text-black border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">
+                      <Badge key={i} variant="secondary" className="bg-orange-500 text-black border-none hover:scale-105 transition-transform duration-200">
                         {achievement}
                       </Badge>
                     ))}

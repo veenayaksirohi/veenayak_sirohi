@@ -111,7 +111,7 @@ export function Work() {
                   <h4 className="font-semibold text-white mb-3">Technologies Used:</h4>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, i) => (
-                      <Badge key={i} variant="secondary" className="bg-orange-500 text-black border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2">
+                      <Badge key={i} variant="secondary" className="bg-orange-500 text-black border-none hover:scale-105 transition-transform duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2">
                         {tech}
                       </Badge>
                     ))}

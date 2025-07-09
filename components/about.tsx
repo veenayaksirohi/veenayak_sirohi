@@ -71,11 +71,11 @@ export function About() {
             <div className="mt-8">
               <h4 className="text-lg font-semibold mb-4 text-white">Core Values</h4>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="bg-orange-500 text-black border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">Innovation</Badge>
-                <Badge variant="secondary" className="bg-orange-500 text-black border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">Quality</Badge>
-                <Badge variant="secondary" className="bg-orange-500 text-black border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">Collaboration</Badge>
-                <Badge variant="secondary" className="bg-orange-500 text-black border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">Continuous Learning</Badge>
-                <Badge variant="secondary" className="bg-orange-500 text-black border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">User-Centric</Badge>
+                <Badge variant="secondary" className="bg-orange-500 text-black border-none hover:scale-105 transition-transform duration-200">Innovation</Badge>
+                <Badge variant="secondary" className="bg-orange-500 text-black border-none hover:scale-105 transition-transform duration-200">Quality</Badge>
+                <Badge variant="secondary" className="bg-orange-500 text-black border-none hover:scale-105 transition-transform duration-200">Collaboration</Badge>
+                <Badge variant="secondary" className="bg-orange-500 text-black border-none hover:scale-105 transition-transform duration-200">Continuous Learning</Badge>
+                <Badge variant="secondary" className="bg-orange-500 text-black border-none hover:scale-105 transition-transform duration-200">User-Centric</Badge>
               </div>
             </div>
           </div>
