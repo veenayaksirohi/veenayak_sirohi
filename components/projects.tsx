@@ -241,9 +241,9 @@ export function Projects() {
                   {project.liveUrl && (
                     <Button
                       size="sm"
-                      className="flex-1 bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-white border-2 border-orange-500 shadow-md shadow-orange-500/20 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2"
+                      className="flex-1 bg-orange-500 hover:bg-orange-400 text-black border-2 border-orange-500 shadow-md shadow-orange-500/20 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2"
                     >
-                      <ExternalLink className="w-4 h-4 mr-2" />
+                      <ExternalLink className="w-4 h-4 mr-2 text-black" />
                       Live Demo
                     </Button>
                   )}

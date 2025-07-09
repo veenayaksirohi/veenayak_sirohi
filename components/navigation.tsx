@@ -51,8 +51,8 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black/95 backdrop-blur-sm shadow-lg border-b border-fuscous-grey" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-lg shadow-black/40 ${
+        isScrolled ? "bg-black/95 backdrop-blur-sm border-b border-fuscous-grey" : "bg-black/80"
       }`}
     >
       <div className="container mx-auto px-6">
@@ -77,10 +77,10 @@ export function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 border-2 border-transparent hover:border-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 hover:text-white hover:scale-105 ${
+                  className={`px-3 py-2 rounded-md text-sm font-semibold transition-colors duration-300 border-2 border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 hover:border-orange-500 hover:bg-orange-500/20 hover:text-orange-500 hover:scale-105 ${
                     activeSection === item.id
-                      ? "text-orange-500 bg-orange-500/10 border-orange-500"
-                      : "text-light-grey hover:text-orange-500"
+                      ? "text-black bg-orange-500/90 border-orange-500 shadow-md shadow-orange-500/30"
+                      : "text-gray-200"
                   }`}
                 >
                   {item.label}
@@ -99,9 +99,9 @@ export function Navigation() {
             >
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-white border-2 border-orange-500 shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200"
+                className="bg-orange-500 hover:bg-orange-400 text-black border-2 border-orange-500 shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200"
               >
-                <Download className="w-4 h-4 mr-2" />
+                <Download className="w-4 h-4 mr-2 text-black" />
                 Resume
               </Button>
             </a>
@@ -141,9 +141,9 @@ export function Navigation() {
                 >
                   <Button
                     size="sm"
-                    className="w-full bg-orange-red hover:bg-orange-red/90 text-white"
+                    className="w-full bg-orange-500 hover:bg-orange-400 text-black border-2 border-orange-500"
                   >
-                    <Download className="w-4 h-4 mr-2" />
+                    <Download className="w-4 h-4 mr-2 text-black" />
                     Download Resume
                   </Button>
                 </a>

@@ -68,7 +68,7 @@ export function Hero() {
           <div className="flex-1 text-center lg:text-left">
             <div className="mb-6">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-widest mb-4 mt-12 font-sans">
-                <span className="block text-light-grey">Hello, I'm</span>
+                <span className="block text-white">Hello, I'm</span>
                 <span className="block bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent uppercase tracking-widest">
                   Veenayak Sirohi
                 </span>
@@ -92,11 +92,11 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-white px-8 py-3 shadow-md shadow-orange-500/20 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2"
+                className="bg-orange-500 hover:bg-orange-400 text-black px-8 py-3 shadow-md shadow-orange-500/20 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2"
                 onClick={() => scrollToSection("projects")}
               >
                 View My Work
-                <ArrowDown className="ml-2 w-4 h-4" />
+                <ArrowDown className="ml-2 w-4 h-4 text-black" />
               </Button>
               <a
                 href="/veenayak_sirohi/veenayak_Resume.pdf"
@@ -166,16 +166,7 @@ export function Hero() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => scrollToSection("about")}
-            className="text-gray-400 border-2 border-orange-500 hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 hover:scale-110 transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2"
-          >
-            <ArrowDown className="w-6 h-6" />
-          </Button>
-        </div>
+        {/* Removed scroll indicator down arrow button */}
       </div>
     </section>
   )
