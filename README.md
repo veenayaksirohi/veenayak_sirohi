@@ -23,31 +23,23 @@ A modern, responsive portfolio website for Veenayak Sirohi, Full Stack Developer
 
 ## 📑 Table of Contents
 
-- [Personal Portfolio Website 🚀](#personal-portfolio-website-)
+- [Veenayak Sirohi - Portfolio 🚀](#veenayak-sirohi---portfolio-)
   - [📦 Repository](#-repository)
   - [📑 Table of Contents](#-table-of-contents)
   - [📁 Repository Structure](#-repository-structure)
   - [✨ Features](#-features)
   - [🛠️ Tech Stack](#️-tech-stack)
   - [🚦 Getting Started](#-getting-started)
-    - [📦 Prerequisites](#-prerequisites)
-    - [⚙️ Installation](#️-installation)
-    - [💻 Development](#-development)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Development](#development)
   - [🚀 Deployment](#-deployment)
-    - [Automatic Deployment (Recommended)](#automatic-deployment-recommended)
-    - [Manual Deployment](#manual-deployment)
   - [🎨 Customization](#-customization)
-    - [Personal Information](#personal-information)
-    - [Styling](#styling)
-    - [Content](#content)
-  - [📷 Sample Image](#-sample-image)
   - [📱 Responsive Design](#-responsive-design)
   - [⚡ Performance](#-performance)
   - [🔧 Scripts](#-scripts)
   - [📄 License](#-license)
-  - [🤝 Contributing](#-contributing)
   - [💬 Support](#-support)
-  - [🙏 Acknowledgments](#-acknowledgments)
 
 ---
 
