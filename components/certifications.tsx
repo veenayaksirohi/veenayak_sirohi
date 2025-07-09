@@ -149,14 +149,13 @@ export function Certifications() {
   }
 
   return (
-    <section id="certifications" className="py-20 bg-deep-black/90">
+    <section id="certifications" className="py-20 bg-black">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
-              Certifications
-            </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-widest mb-4 font-sans">
+            <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent uppercase tracking-widest">Certifications</span>
           </h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-orange-400 rounded-full mx-auto mb-6"></div>
           <p className="text-light-grey max-w-2xl mx-auto">
             Professional certifications that validate my expertise and commitment to continuous learning
           </p>
@@ -164,7 +163,7 @@ export function Certifications() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certifications.map((cert) => (
-            <Card key={cert.id} className="bg-fuscous-grey border-fuscous-grey hover:border-orange-red/50 transition-colors">
+            <Card key={cert.id} className="bg-black border-gray-700 hover:border-orange-500 transition-all duration-200 hover:scale-105 animate-pulse-slow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2">
               <CardHeader className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="relative">
@@ -181,9 +180,11 @@ export function Certifications() {
                   </div>
                 </div>
                 <CardTitle className="text-white text-lg leading-tight">{cert.title}</CardTitle>
-                <p className="text-orange-red font-medium">{cert.issuer}</p>
+                <p className="text-orange-500 font-medium">{cert.issuer}</p>
                 <div className="flex justify-center">
-                  <Badge className={getStatusColor(cert.status)}>{getStatusText(cert.status)}</Badge>
+                  <Badge className={getStatusColor(cert.status)}>
+                    {getStatusText(cert.status) === 'Active' ? <span>✔️ Active</span> : <span>💤 Expired</span>}
+                  </Badge>
                 </div>
               </CardHeader>
 
@@ -206,7 +207,7 @@ export function Certifications() {
 
                 {/* Level */}
                 <div className="flex items-center">
-                  <Award className="w-4 h-4 mr-2 text-orange-red" />
+                  <Award className="w-4 h-4 mr-2 text-orange-500" />
                   <span className="text-sm text-light-grey">Level: {cert.level}</span>
                 </div>
 
@@ -215,7 +216,7 @@ export function Certifications() {
                   <h4 className="font-semibold text-white mb-2 text-sm">Skills Validated:</h4>
                   <div className="flex flex-wrap gap-1">
                     {cert.skills.map((skill, index) => (
-                      <Badge key={index} variant="outline" className="text-xs border-orange-red text-orange-red">
+                      <Badge key={index} variant="outline" className="text-xs border-none bg-gradient-to-r from-orange-500 to-orange-400 text-white shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">
                         {skill}
                       </Badge>
                     ))}
@@ -235,7 +236,7 @@ export function Certifications() {
                   <Button
                     size="sm"
                     variant="outline"
-                    className="w-full border-fuscous-grey text-light-grey hover:bg-orange-red/10 bg-transparent"
+                    className="w-full border-gray-700 text-[#AAAAAA] hover:bg-orange-500/10 bg-transparent"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Verify Credential
@@ -249,25 +250,25 @@ export function Certifications() {
         {/* Summary Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">
               {certifications.length}
             </div>
             <div className="text-light-grey text-sm">Total Certifications</div>
           </div>
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">
               {certifications.filter((cert) => cert.status === "active").length}
             </div>
             <div className="text-light-grey text-sm">Active Certifications</div>
           </div>
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">
               {certifications.filter((cert) => cert.level.includes("Professional")).length}
             </div>
             <div className="text-light-grey text-sm">Professional Level</div>
           </div>
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">
               0
             </div>
             <div className="text-light-grey text-sm">Years Experience</div>

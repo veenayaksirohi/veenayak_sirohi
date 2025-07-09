@@ -63,25 +63,25 @@ export function Contact() {
       icon: Linkedin,
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/veenayak_sirohi-ab30ab227/",
-      color: "hover:text-blue-400",
+      color: "hover:text-orange-500",
     },
     {
       icon: Mail,
       label: "Email",
       href: "mailto:veenayaksirohi@gmail.com",
-      color: "hover:text-red-400",
+      color: "hover:text-orange-500",
     },
   ]
 
   return (
-    <section id="contact" className="py-20 bg-deep-black/90">
+    <section id="contact" className="py-20 bg-black">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get In{" "}
-            <span className="bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">Touch</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-widest mb-4 font-sans">
+            Get In <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent uppercase tracking-widest">Touch</span>
             <div className="text-lg text-light-grey mt-2 font-semibold">Veenayak Sirohi</div>
           </h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-orange-400 rounded-full mx-auto mb-6"></div>
           <p className="text-light-grey max-w-2xl mx-auto">
             Ready to start your next project? Let's discuss how we can work together to bring your ideas to life.
           </p>
@@ -89,7 +89,7 @@ export function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="bg-fuscous-grey border-fuscous-grey">
+          <Card className="bg-black border-gray-700 transition-all duration-200 hover:scale-105 animate-pulse-slow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2">
             <CardHeader>
               <CardTitle className="text-white">Send Me a Message</CardTitle>
             </CardHeader>
@@ -104,7 +104,7 @@ export function Contact() {
                       id="name"
                       name="name"
                       required
-                      className="bg-deep-black border-fuscous-grey text-white focus:border-orange-red"
+                      className="bg-[#1F1F1F] border-gray-700 text-white focus:border-orange-500"
                       placeholder="Veenayak Sirohi"
                     />
                   </div>
@@ -117,7 +117,7 @@ export function Contact() {
                       name="email"
                       type="email"
                       required
-                      className="bg-deep-black border-fuscous-grey text-white focus:border-orange-red"
+                      className="bg-[#1F1F1F] border-gray-700 text-white focus:border-orange-500"
                       placeholder="veenayaksirohi@gmail.com"
                     />
                   </div>
@@ -131,7 +131,7 @@ export function Contact() {
                     id="title"
                     name="title"
                     required
-                    className="bg-deep-black border-fuscous-grey text-white focus:border-orange-red"
+                    className="bg-[#1F1F1F] border-gray-700 text-white focus:border-orange-500"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -145,7 +145,7 @@ export function Contact() {
                     name="message"
                     required
                     rows={6}
-                    className="bg-deep-black border-fuscous-grey text-white focus:border-orange-red resize-none"
+                    className="bg-[#1F1F1F] border-gray-700 text-white focus:border-orange-500 resize-none"
                     placeholder="Tell me about your project or how I can help you..."
                   />
                 </div>
@@ -153,7 +153,7 @@ export function Contact() {
                 <Button
                   type="submit"
                   disabled={status === "sending"}
-                  className="w-full bg-orange-red hover:bg-orange-red/90 disabled:opacity-50"
+                  className="w-full bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-white shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200"
                 >
                   {status === "sending" ? "Sending…" : "Send Message"}
                 </Button>
@@ -165,7 +165,7 @@ export function Contact() {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <Card className="bg-fuscous-grey border-fuscous-grey">
+            <Card className="bg-black border-gray-700 transition-all duration-200 hover:scale-105 animate-pulse-slow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2">
               <CardHeader>
                 <CardTitle className="text-white">Contact Information</CardTitle>
               </CardHeader>
@@ -174,10 +174,10 @@ export function Contact() {
                   <a
                     key={index}
                     href={info.href}
-                    className="flex items-center space-x-4 text-light-grey hover:text-orange-red transition-colors group"
+                    className="flex items-center space-x-4 text-[#AAAAAA] hover:text-orange-500 transition-colors group"
                   >
-                    <div className="w-12 h-12 bg-orange-red/10 rounded-lg flex items-center justify-center group-hover:bg-orange-red/20 transition-colors">
-                      <info.icon className="w-6 h-6 text-orange-red" />
+                    <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center group-hover:bg-orange-500/20 transition-colors">
+                      <info.icon className="w-6 h-6 text-orange-500" />
                     </div>
                     <div>
                       <div className="font-medium text-white">{info.label}</div>
@@ -188,7 +188,7 @@ export function Contact() {
               </CardContent>
             </Card>
 
-            <Card className="bg-fuscous-grey border-fuscous-grey">
+            <Card className="bg-black border-gray-700 transition-all duration-200 hover:scale-105 animate-pulse-slow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2">
               <CardHeader>
                 <CardTitle className="text-white">Follow Me</CardTitle>
               </CardHeader>
@@ -200,7 +200,7 @@ export function Contact() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-12 h-12 bg-deep-black rounded-lg flex items-center justify-center text-light-grey hover:text-orange-red transition-colors`}
+                      className={`w-12 h-12 bg-black rounded-lg flex items-center justify-center text-[#AAAAAA] border-2 border-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 hover:text-white transition-all duration-200 hover:scale-110`}
                     >
                       <social.icon className="w-6 h-6" />
                     </a>
@@ -209,7 +209,7 @@ export function Contact() {
               </CardContent>
             </Card>
 
-            <Card className="bg-fuscous-grey border-fuscous-grey">
+            <Card className="bg-black border-gray-700 transition-all duration-200 hover:scale-105 animate-pulse-slow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2">
               <CardHeader>
                 <CardTitle className="text-white">Let's Work Together</CardTitle>
               </CardHeader>

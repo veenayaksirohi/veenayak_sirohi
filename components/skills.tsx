@@ -11,7 +11,7 @@ export function Skills() {
     {
       icon: Database,
       title: "Data Science & Analytics",
-      color: "text-blue-400",
+      color: "text-orange-500",
       skills: [
         { name: "Data Analysis", level: 90, description: "Extracting insights and trends from complex datasets." },
         { name: "Microsoft Power BI", level: 85, description: "Creating interactive dashboards and data visualizations." },
@@ -24,7 +24,7 @@ export function Skills() {
     {
       icon: Server,
       title: "Backend & Databases",
-      color: "text-green-400",
+      color: "text-orange-500",
       skills: [
         { name: "Python (Flask)", level: 85, description: "Developing web applications and microservices with Flask." },
         { name: "REST APIs", level: 90, description: "Designing, building, and testing robust RESTful APIs." },
@@ -35,7 +35,7 @@ export function Skills() {
     {
       icon: Cloud,
       title: "Cloud & DevOps",
-      color: "text-orange-400",
+      color: "text-orange-500",
       skills: [
         { name: "Amazon Web Services (AWS)", level: 75, description: "Experience with core services like EC2 and S3 for cloud computing." },
         { name: "Docker", level: 80, description: "Containerizing applications for consistent and scalable deployment." },
@@ -46,7 +46,7 @@ export function Skills() {
     {
       icon: Code,
       title: "Programming & Web",
-      color: "text-purple-400",
+      color: "text-orange-500",
       skills: [
         { name: "Python", level: 90, description: "Extensive experience in programming and data analysis." },
         { name: "Data Structures & Algorithms", level: 85, description: "Applying core CS concepts for efficient problem-solving." },
@@ -57,7 +57,7 @@ export function Skills() {
     {
       icon: Palette,
       title: "Professional & Soft Skills",
-      color: "text-pink-400",
+      color: "text-orange-500",
       skills: [
         { name: "Analytical Skills", level: 95, description: "Analyzing complex problems to devise effective solutions." },
         { name: "Attention to Detail", level: 90, description: "Meticulous approach to data and development tasks." },
@@ -82,15 +82,13 @@ export function Skills() {
   };
 
   return (
-    <section id="skills" className="py-20 bg-deep-black/90">
+    <section id="skills" className="py-20 bg-black">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Skills &{" "}
-            <span className="bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
-              Expertise
-            </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-widest mb-4 font-sans">
+            Skills & <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent uppercase tracking-widest">Expertise</span>
           </h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-orange-400 rounded-full mx-auto mb-6"></div>
           <p className="text-light-grey max-w-2xl mx-auto">
             A comprehensive overview of my technical skills and professional competencies
           </p>
@@ -101,7 +99,7 @@ export function Skills() {
           <button
             onClick={handlePrev}
             disabled={!canGoPrev}
-            className={`px-4 py-2 rounded bg-fuscous-grey text-white font-bold transition-colors ${canGoPrev ? 'hover:bg-orange-red' : 'opacity-50 cursor-not-allowed'}`}
+            className={`px-4 py-2 rounded bg-gradient-to-r from-orange-500 to-orange-400 text-white font-bold border-2 border-orange-500 shadow-md shadow-orange-500/20 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2 ${canGoPrev ? '' : 'opacity-50 cursor-not-allowed'}`}
             aria-label="Previous"
           >
             &#8592; Prev
@@ -112,7 +110,7 @@ export function Skills() {
           <button
             onClick={handleNext}
             disabled={!canGoNext}
-            className={`px-4 py-2 rounded bg-fuscous-grey text-white font-bold transition-colors ${canGoNext ? 'hover:bg-orange-red' : 'opacity-50 cursor-not-allowed'}`}
+            className={`px-4 py-2 rounded bg-gradient-to-r from-orange-500 to-orange-400 text-white font-bold border-2 border-orange-500 shadow-md shadow-orange-500/20 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2 ${canGoNext ? '' : 'opacity-50 cursor-not-allowed'}`}
             aria-label="Next"
           >
             Next &#8594;
@@ -121,10 +119,10 @@ export function Skills() {
 
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {skillCategories.slice(windowStart, windowEnd).map((category, index) => (
-            <Card key={windowStart + index} className="bg-fuscous-grey border-fuscous-grey">
+            <Card key={windowStart + index} className="bg-black border-gray-700 transition-all duration-200 hover:scale-105 animate-pulse-slow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2">
               <CardHeader>
                 <CardTitle className="flex items-center text-white">
-                  <category.icon className={`w-6 h-6 mr-3 text-orange-red`} />
+                  <category.icon className={`w-6 h-6 mr-3 text-orange-500`} />
                   {category.title}
                 </CardTitle>
               </CardHeader>
@@ -149,7 +147,7 @@ export function Skills() {
           <button
             onClick={handlePrev}
             disabled={!canGoPrev}
-            className={`px-4 py-2 rounded bg-fuscous-grey text-white font-bold transition-colors ${canGoPrev ? 'hover:bg-orange-red' : 'opacity-50 cursor-not-allowed'}`}
+            className={`px-4 py-2 rounded bg-gradient-to-r from-orange-500 to-orange-400 text-white font-bold border-2 border-orange-500 shadow-md shadow-orange-500/20 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2 ${canGoPrev ? '' : 'opacity-50 cursor-not-allowed'}`}
             aria-label="Previous"
           >
             &#8592; Prev
@@ -160,7 +158,7 @@ export function Skills() {
           <button
             onClick={handleNext}
             disabled={!canGoNext}
-            className={`px-4 py-2 rounded bg-fuscous-grey text-white font-bold transition-colors ${canGoNext ? 'hover:bg-orange-red' : 'opacity-50 cursor-not-allowed'}`}
+            className={`px-4 py-2 rounded bg-gradient-to-r from-orange-500 to-orange-400 text-white font-bold border-2 border-orange-500 shadow-md shadow-orange-500/20 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2 ${canGoNext ? '' : 'opacity-50 cursor-not-allowed'}`}
             aria-label="Next"
           >
             Next &#8594;

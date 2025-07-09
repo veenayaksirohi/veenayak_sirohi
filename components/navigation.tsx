@@ -52,7 +52,7 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-deep-black/95 backdrop-blur-sm shadow-lg border-b border-fuscous-grey" : "bg-transparent"
+        isScrolled ? "bg-black/95 backdrop-blur-sm shadow-lg border-b border-fuscous-grey" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6">
@@ -77,10 +77,10 @@ export function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 border-2 border-transparent hover:border-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 hover:text-white hover:scale-105 ${
                     activeSection === item.id
-                      ? "text-orange-red bg-orange-red/10"
-                      : "text-light-grey hover:text-orange-red hover:bg-fuscous-grey"
+                      ? "text-orange-500 bg-orange-500/10 border-orange-500"
+                      : "text-light-grey hover:text-orange-500"
                   }`}
                 >
                   {item.label}
@@ -99,7 +99,7 @@ export function Navigation() {
             >
               <Button
                 size="sm"
-                className="bg-orange-red hover:bg-orange-red/90 text-white"
+                className="bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-white border-2 border-orange-500 shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Resume
@@ -118,7 +118,7 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-deep-black/95 backdrop-blur-sm rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-black/95 backdrop-blur-sm rounded-lg mt-2">
               {navItems.map((item) => (
                 <button
                   key={item.id}

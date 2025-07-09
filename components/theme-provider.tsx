@@ -7,6 +7,6 @@ import {
 } from 'next-themes'
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  // Ready for color palette and dark mode support. Extend here for future color mode switching.
+  // ThemeProvider is ready for black backgrounds and energetic orange accents.
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
 }

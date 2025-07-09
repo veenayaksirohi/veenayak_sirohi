@@ -151,13 +151,13 @@ export function Projects() {
   const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.category === filter)
 
   return (
-    <section id="projects" className="py-20 bg-deep-black/90">
+    <section id="projects" className="py-20 bg-black">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            My{" "}
-            <span className="bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">Projects</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-widest mb-4 font-sans">
+            My <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent uppercase tracking-widest">Projects</span>
           </h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-orange-400 rounded-full mx-auto mb-6"></div>
           <p className="text-light-grey max-w-2xl mx-auto mb-8">
             A showcase of my recent work and personal projects that demonstrate my skills and creativity
           </p>
@@ -171,8 +171,8 @@ export function Projects() {
                 onClick={() => setFilter(category.id)}
                 className={
                   filter === category.id
-                    ? "bg-orange-red hover:bg-orange-red/90 text-white"
-                    : "border-fuscous-grey text-light-grey hover:bg-fuscous-grey"
+                    ? "bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-white border-2 border-orange-500 shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2"
+                    : "border-2 border-orange-500 text-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 hover:text-white hover:scale-105 transition-transform duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2"
                 }
               >
                 <Filter className="w-4 h-4 mr-2" />
@@ -186,7 +186,7 @@ export function Projects() {
           {filteredProjects.map((project) => (
             <Card
               key={project.id}
-              className="bg-fuscous-grey border-fuscous-grey hover:border-orange-red/50 transition-all duration-300 group"
+              className="bg-black border-gray-700 hover:border-orange-500 transition-all duration-200 hover:scale-105 group animate-pulse-slow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2"
             >
               <div className="relative overflow-hidden">
                 <Image
@@ -194,20 +194,20 @@ export function Projects() {
                   alt={project.title}
                   width={500}
                   height={300}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-48 object-cover transition-transform duration-200 group-hover:scale-105"
                 />
                 <div className="absolute top-4 right-4">
                   <Badge
                     variant={project.status === "completed" ? "default" : "secondary"}
-                    className={project.status === "completed" ? "bg-green-600" : "bg-orange-red/80 text-white"}
+                    className={project.status === "completed" ? "bg-green-600" : "bg-orange-500 text-white"}
                   >
-                    {project.status === "completed" ? "Completed" : "In Progress"}
+                    {project.status === "completed" ? <span>✔️ Completed</span> : <span>🚧 In Progress</span>}
                   </Badge>
                 </div>
               </div>
 
               <CardHeader>
-                <CardTitle className="text-white group-hover:text-orange-red transition-colors">
+                <CardTitle className="text-white group-hover:text-orange-500 transition-colors">
                   {project.title}
                 </CardTitle>
                 <p className="text-light-grey text-sm">{project.description}</p>
@@ -229,7 +229,7 @@ export function Projects() {
                   <ul className="text-sm text-light-grey space-y-1">
                     {project.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-orange-red rounded-full mt-2 mr-2 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 mr-2 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
@@ -241,7 +241,7 @@ export function Projects() {
                   {project.liveUrl && (
                     <Button
                       size="sm"
-                      className="flex-1 bg-orange-red hover:bg-orange-red/90 text-white"
+                      className="flex-1 bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-white border-2 border-orange-500 shadow-md shadow-orange-500/20 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2"
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Live Demo
@@ -250,7 +250,7 @@ export function Projects() {
                   <Button
                     size="sm"
                     variant="outline"
-                    className="flex-1 border-fuscous-grey text-light-grey hover:bg-fuscous-grey bg-transparent"
+                    className="flex-1 border-2 border-orange-500 text-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 hover:text-white hover:scale-105 transition-all duration-200 bg-transparent focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2"
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code

@@ -25,8 +25,11 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#f97316", // orange-500
+          400: "#fb923c",    // orange-400
+          500: "#f97316",    // orange-500
+          600: "#ea580c",    // orange-600
+          foreground: "#fff",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -41,8 +44,11 @@ const config: Config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "#f97316", // orange-500 as accent
+          400: "#fb923c",
+          500: "#f97316",
+          600: "#ea580c",
+          foreground: "#fff",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -59,14 +65,32 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
-        'orange-red': '#FF3C00',
+        'orange-red': '#f97316', // orange-500
         'deep-black': '#070707',
         'fuscous-grey': '#383738',
-        'light-grey': '#8F9194',
+        'light-grey': '#AAAAAA', // update to mid-grey for secondary text
+        orange: {
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#f97316',
+          600: '#ea580c',
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
+        },
+        black: '#000000',
+        // Remove blue as an accent
       },
       backgroundColor: {
         'card': 'rgba(56, 55, 56, 0.1)',
         'overlay': 'rgba(56, 55, 56, 0.2)',
+      },
+      backgroundImage: {
+        'gradient-orange': 'linear-gradient(90deg, #f97316 0%, #fb923c 100%)',
+        'gradient-black': 'linear-gradient(135deg, #000000 0%, #111111 100%)',
       },
       borderColor: {
         'subtle': 'rgba(56, 55, 56, 0.3)',

@@ -32,13 +32,13 @@ function Education() {
   ]
 
   return (
-    <section id="education" className="py-20 bg-deep-black/90">
+    <section id="education" className="py-20 bg-black">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            My{" "}
-            <span className="bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">Education</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-widest mb-4 font-sans">
+            My <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent uppercase tracking-widest">Education</span>
           </h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-orange-400 rounded-full mx-auto mb-6"></div>
           <p className="text-light-grey max-w-2xl mx-auto mb-8">
             A comprehensive overview of my academic background and achievements
           </p>
@@ -48,7 +48,7 @@ function Education() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="bg-orange-red hover:bg-orange-red/90 text-white">
+            <Button className="bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-white shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">
               <Download className="w-4 h-4 mr-2" />
               Download PDF Resume
             </Button>
@@ -57,7 +57,7 @@ function Education() {
 
         <div className="w-full space-y-8">
           {education.map((edu, index) => (
-            <Card key={index} className="bg-fuscous-grey border-fuscous-grey">
+            <Card key={index} className="bg-black border-gray-700 transition-all duration-200 hover:scale-105 animate-pulse-slow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2">
               <CardHeader className="flex flex-row items-center gap-6">
                 {edu.logo && (
                   <div className="flex-shrink-0 flex items-center justify-center h-16 w-16">
@@ -69,10 +69,10 @@ function Education() {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-light-grey">
                     <div className="flex items-center">
                       <span className="font-medium">{edu.school}</span>
-                      <MapPin className="w-4 h-4 mx-2 text-orange-red" />
+                      <MapPin className="w-4 h-4 mx-2 text-orange-500" />
                       <span>{edu.location}</span>
                     </div>
-                    <span className="text-orange-red">{edu.period}</span>
+                    <span className="text-orange-500">{edu.period}</span>
                   </div>
                 </div>
               </CardHeader>
@@ -81,7 +81,7 @@ function Education() {
                 {edu.achievements.length > 0 && (
                   <div className="flex flex-wrap gap-2">
                     {edu.achievements.map((achievement, i) => (
-                      <Badge key={i} variant="secondary" className="bg-deep-black text-light-grey border-fuscous-grey">
+                      <Badge key={i} variant="secondary" className="bg-gradient-to-r from-orange-500 to-orange-400 text-white border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">
                         {achievement}
                       </Badge>
                     ))}

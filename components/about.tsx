@@ -36,12 +36,13 @@ export function About() {
   ]
 
   return (
-    <section id="about" className="py-20 bg-deep-black/90">
+    <section id="about" className="py-20 bg-black">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            About <span className="bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">Me</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-widest mb-4 font-sans">
+            About <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent uppercase tracking-widest">Me</span>
           </h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-orange-400 rounded-full mx-auto mb-6"></div>
           <p className="text-light-grey max-w-2xl mx-auto">
             Get to know more about my journey, skills, and what drives my passion for development
           </p>
@@ -70,11 +71,11 @@ export function About() {
             <div className="mt-8">
               <h4 className="text-lg font-semibold mb-4 text-white">Core Values</h4>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="bg-fuscous-grey text-light-grey">Innovation</Badge>
-                <Badge variant="secondary" className="bg-fuscous-grey text-light-grey">Quality</Badge>
-                <Badge variant="secondary" className="bg-fuscous-grey text-light-grey">Collaboration</Badge>
-                <Badge variant="secondary" className="bg-fuscous-grey text-light-grey">Continuous Learning</Badge>
-                <Badge variant="secondary" className="bg-fuscous-grey text-light-grey">User-Centric</Badge>
+                <Badge variant="secondary" className="bg-gradient-to-r from-orange-500 to-orange-400 text-white border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">Innovation</Badge>
+                <Badge variant="secondary" className="bg-gradient-to-r from-orange-500 to-orange-400 text-white border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">Quality</Badge>
+                <Badge variant="secondary" className="bg-gradient-to-r from-orange-500 to-orange-400 text-white border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">Collaboration</Badge>
+                <Badge variant="secondary" className="bg-gradient-to-r from-orange-500 to-orange-400 text-white border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">Continuous Learning</Badge>
+                <Badge variant="secondary" className="bg-gradient-to-r from-orange-500 to-orange-400 text-white border-none shadow-md shadow-orange-500/20 hover:scale-105 transition-transform duration-200">User-Centric</Badge>
               </div>
             </div>
           </div>
@@ -82,9 +83,9 @@ export function About() {
           {/* Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {highlights.map((item, index) => (
-              <Card key={index} className="bg-fuscous-grey border-fuscous-grey hover:border-orange-red/50 transition-colors">
+              <Card key={index} className="bg-black border-gray-700 hover:border-orange-500 transition-all duration-200 hover:scale-105 animate-pulse-slow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2">
                 <CardContent className="p-6 text-center">
-                  <item.icon className="w-8 h-8 text-orange-red mx-auto mb-4" />
+                  <item.icon className="w-8 h-8 text-orange-500 mx-auto mb-4 transition-all duration-200 group-hover:scale-110 group-hover:text-orange-400" />
                   <h4 className="font-semibold mb-2 text-white">{item.title}</h4>
                   <p className="text-sm text-light-grey">{item.description}</p>
                 </CardContent>
@@ -97,7 +98,7 @@ export function About() {
         <div className="flex justify-between gap-8 overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-fuscous-grey scrollbar-track-deep-black">
           {stats.map((stat, index) => (
             <div key={index} className="flex-1 min-w-[180px] text-center">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent mb-2">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
               <div className="text-light-grey text-sm">{stat.label}</div>
