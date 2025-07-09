@@ -52,7 +52,7 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-gray-900/95 backdrop-blur-sm shadow-lg border-b border-gray-800" : "bg-transparent"
+        isScrolled ? "bg-deep-black/95 backdrop-blur-sm shadow-lg border-b border-fuscous-grey" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6">
@@ -64,7 +64,7 @@ export function Navigation() {
               className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300"
             >
               <img src="/veenayak_sirohi/profile-avatar.png" alt="Profile Avatar" width={32} height={32} className="rounded-full" />
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
                 Portfolio
               </span>
             </button>
@@ -79,8 +79,8 @@ export function Navigation() {
                   onClick={() => scrollToSection(item.id)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
                     activeSection === item.id
-                      ? "text-blue-400 bg-blue-400/10"
-                      : "text-gray-300 hover:text-white hover:bg-gray-700"
+                      ? "text-orange-red bg-orange-red/10"
+                      : "text-light-grey hover:text-orange-red hover:bg-fuscous-grey"
                   }`}
                 >
                   {item.label}
@@ -99,7 +99,7 @@ export function Navigation() {
             >
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                className="bg-orange-red hover:bg-orange-red/90 text-white"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Resume
@@ -109,7 +109,7 @@ export function Navigation() {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 hover:text-white p-2">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-light-grey hover:text-orange-red p-2">
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -118,15 +118,15 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-deep-black/95 backdrop-blur-sm rounded-lg mt-2">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors duration-300 ${
                     activeSection === item.id
-                      ? "text-blue-400 bg-blue-400/10"
-                      : "text-gray-300 hover:text-white hover:bg-gray-700"
+                      ? "text-orange-red bg-orange-red/10"
+                      : "text-light-grey hover:text-orange-red hover:bg-fuscous-grey"
                   }`}
                 >
                   {item.label}
@@ -141,7 +141,7 @@ export function Navigation() {
                 >
                   <Button
                     size="sm"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                    className="w-full bg-orange-red hover:bg-orange-red/90 text-white"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download Resume

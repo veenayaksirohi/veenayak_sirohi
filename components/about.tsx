@@ -36,13 +36,13 @@ export function About() {
   ]
 
   return (
-    <section id="about" className="py-20 bg-gray-800/50">
+    <section id="about" className="py-20 bg-deep-black/90">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            About <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Me</span>
+            About <span className="bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">Me</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-light-grey max-w-2xl mx-auto">
             Get to know more about my journey, skills, and what drives my passion for development
           </p>
         </div>
@@ -51,7 +51,7 @@ export function About() {
           {/* Content */}
           <div>
             <h3 className="text-2xl font-semibold mb-6 text-white">My Story</h3>
-            <div className="space-y-4 text-gray-300 text-justify">
+            <div className="space-y-4 text-light-grey text-justify">
               <p>
                 I'm a versatile full‑stack developer and data enthusiast who thrives on transforming ideas into robust digital experiences. With hands‑on expertise in Flask, Python, and modern web frameworks, I build clean, scalable APIs and data‑driven dashboards that help teams make smarter decisions. My passion lies at the intersection of development and data—whether I'm automating CI/CD pipelines with GitHub Actions or visualizing insights in Power BI, I'm driven to deliver reliable, high‑impact solutions.
               </p>
@@ -70,11 +70,11 @@ export function About() {
             <div className="mt-8">
               <h4 className="text-lg font-semibold mb-4 text-white">Core Values</h4>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">Innovation</Badge>
-                <Badge variant="secondary">Quality</Badge>
-                <Badge variant="secondary">Collaboration</Badge>
-                <Badge variant="secondary">Continuous Learning</Badge>
-                <Badge variant="secondary">User-Centric</Badge>
+                <Badge variant="secondary" className="bg-fuscous-grey text-light-grey">Innovation</Badge>
+                <Badge variant="secondary" className="bg-fuscous-grey text-light-grey">Quality</Badge>
+                <Badge variant="secondary" className="bg-fuscous-grey text-light-grey">Collaboration</Badge>
+                <Badge variant="secondary" className="bg-fuscous-grey text-light-grey">Continuous Learning</Badge>
+                <Badge variant="secondary" className="bg-fuscous-grey text-light-grey">User-Centric</Badge>
               </div>
             </div>
           </div>
@@ -82,11 +82,11 @@ export function About() {
           {/* Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {highlights.map((item, index) => (
-              <Card key={index} className="bg-gray-800 border-gray-700 hover:border-blue-500/50 transition-colors">
+              <Card key={index} className="bg-fuscous-grey border-fuscous-grey hover:border-orange-red/50 transition-colors">
                 <CardContent className="p-6 text-center">
-                  <item.icon className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+                  <item.icon className="w-8 h-8 text-orange-red mx-auto mb-4" />
                   <h4 className="font-semibold mb-2 text-white">{item.title}</h4>
-                  <p className="text-sm text-gray-400">{item.description}</p>
+                  <p className="text-sm text-light-grey">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -94,13 +94,13 @@ export function About() {
         </div>
 
         {/* Stats */}
-        <div className="flex justify-between gap-8 overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
+        <div className="flex justify-between gap-8 overflow-x-auto py-4 scrollbar-thin scrollbar-thumb-fuscous-grey scrollbar-track-deep-black">
           {stats.map((stat, index) => (
             <div key={index} className="flex-1 min-w-[180px] text-center">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
+              <div className="text-light-grey text-sm">{stat.label}</div>
             </div>
           ))}
         </div>

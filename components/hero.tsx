@@ -54,12 +54,12 @@ export function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-gray-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-deep-black via-fuscous-grey/80 to-deep-black"></div>
 
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-orange-red/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-fuscous-grey/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -68,20 +68,20 @@ export function Hero() {
           <div className="flex-1 text-center lg:text-left">
             <div className="mb-6">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 mt-12">
-                <span className="block text-gray-300">Hello, I'm</span>
-                <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="block text-light-grey">Hello, I'm</span>
+                <span className="block bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
                   Veenayak Sirohi
                 </span>
               </h1>
-              <div className="hero-title text-xl md:text-2xl text-gray-400 mb-6 flex flex-wrap items-center gap-2">
+              <div className="hero-title text-xl md:text-2xl text-light-grey mb-6 flex flex-wrap items-center gap-2">
                 <span className="title-text">Computer Science Student</span>
                 <span className="title-separator">|</span>
                 <span className="title-text typing-text">
                   {displayedText}
-                  <span className="blinking-cursor">|</span>
+                  <span className="blinking-cursor text-orange-red">|</span>
                 </span>
               </div>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-lg text-light-grey max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Computer Science student passionate about data analysis. Skilled in Python, Pandas, and Power BI for turning data into insights.
               </p>
             </div>
@@ -90,7 +90,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3"
+                className="bg-orange-red hover:bg-orange-red/90 text-white px-8 py-3"
                 onClick={() => scrollToSection("projects")}
               >
                 View My Work
@@ -102,7 +102,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button>
+                <Button className="bg-fuscous-grey hover:bg-orange-red text-white">
                   <Download className="mr-2 w-4 h-4" />
                   Download Resume
                 </Button>
@@ -117,7 +117,7 @@ export function Hero() {
                 rel="noopener noreferrer"
                 aria-label="GitHub"
               >
-                <Button size="icon" variant="ghost" className="text-gray-400 hover:text-white hover:bg-gray-800">
+                <Button size="icon" variant="ghost" className="text-light-grey hover:text-orange-red hover:bg-fuscous-grey">
                   <Github className="w-5 h-5" />
                 </Button>
               </a>
@@ -127,7 +127,7 @@ export function Hero() {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <Button size="icon" variant="ghost" className="text-gray-400 hover:text-white hover:bg-gray-800">
+                <Button size="icon" variant="ghost" className="text-light-grey hover:text-orange-red hover:bg-fuscous-grey">
                   <Linkedin className="w-5 h-5" />
                 </Button>
               </a>
@@ -135,7 +135,7 @@ export function Hero() {
                 href="mailto:veenayaksirohi@gmail.com"
                 aria-label="Email"
               >
-                <Button size="icon" variant="ghost" className="text-gray-400 hover:text-white hover:bg-gray-800">
+                <Button size="icon" variant="ghost" className="text-light-grey hover:text-orange-red hover:bg-fuscous-grey">
                   <Mail className="w-5 h-5" />
                 </Button>
               </a>
@@ -145,8 +145,8 @@ export function Hero() {
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-400 to-purple-400 p-1">
-                <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-orange-red to-fuscous-grey p-1">
+                <div className="w-full h-full rounded-full bg-deep-black flex items-center justify-center overflow-hidden">
                   <img
                     src="/veenayak_sirohi/profile-avatar.png"
                     alt="Profile Avatar"
@@ -157,8 +157,8 @@ export function Hero() {
                 </div>
               </div>
               {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-bounce"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full animate-bounce delay-500"></div>
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-orange-red rounded-full animate-bounce"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-fuscous-grey rounded-full animate-bounce delay-500"></div>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@ export function Hero() {
             variant="ghost"
             size="icon"
             onClick={() => scrollToSection("about")}
-            className="text-gray-400 hover:text-white"
+            className="text-light-grey hover:text-orange-red"
           >
             <ArrowDown className="w-6 h-6" />
           </Button>

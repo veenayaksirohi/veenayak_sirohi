@@ -74,22 +74,22 @@ export function Contact() {
   ]
 
   return (
-    <section id="contact" className="py-20 bg-gray-800/50">
+    <section id="contact" className="py-20 bg-deep-black/90">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Get In{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Touch</span>
-            <div className="text-lg text-gray-300 mt-2 font-semibold">Veenayak Sirohi</div>
+            <span className="bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">Touch</span>
+            <div className="text-lg text-light-grey mt-2 font-semibold">Veenayak Sirohi</div>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-light-grey max-w-2xl mx-auto">
             Ready to start your next project? Let's discuss how we can work together to bring your ideas to life.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="bg-gray-800 border-gray-700">
+          <Card className="bg-fuscous-grey border-fuscous-grey">
             <CardHeader>
               <CardTitle className="text-white">Send Me a Message</CardTitle>
             </CardHeader>
@@ -97,19 +97,19 @@ export function Contact() {
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-gray-300">
+                    <Label htmlFor="name" className="text-light-grey">
                       Name
                     </Label>
                     <Input
                       id="name"
                       name="name"
                       required
-                      className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
+                      className="bg-deep-black border-fuscous-grey text-white focus:border-orange-red"
                       placeholder="Veenayak Sirohi"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-gray-300">
+                    <Label htmlFor="email" className="text-light-grey">
                       Email
                     </Label>
                     <Input
@@ -117,27 +117,27 @@ export function Contact() {
                       name="email"
                       type="email"
                       required
-                      className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
+                      className="bg-deep-black border-fuscous-grey text-white focus:border-orange-red"
                       placeholder="veenayaksirohi@gmail.com"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="title" className="text-gray-300">
+                  <Label htmlFor="title" className="text-light-grey">
                     Subject
                   </Label>
                   <Input
                     id="title"
                     name="title"
                     required
-                    className="bg-gray-700 border-gray-600 text-white focus:border-blue-400"
+                    className="bg-deep-black border-fuscous-grey text-white focus:border-orange-red"
                     placeholder="What's this about?"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-gray-300">
+                  <Label htmlFor="message" className="text-light-grey">
                     Message
                   </Label>
                   <Textarea
@@ -145,7 +145,7 @@ export function Contact() {
                     name="message"
                     required
                     rows={6}
-                    className="bg-gray-700 border-gray-600 text-white focus:border-blue-400 resize-none"
+                    className="bg-deep-black border-fuscous-grey text-white focus:border-orange-red resize-none"
                     placeholder="Tell me about your project or how I can help you..."
                   />
                 </div>
@@ -153,7 +153,7 @@ export function Contact() {
                 <Button
                   type="submit"
                   disabled={status === "sending"}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:opacity-50"
+                  className="w-full bg-orange-red hover:bg-orange-red/90 disabled:opacity-50"
                 >
                   {status === "sending" ? "Sending…" : "Send Message"}
                 </Button>
@@ -165,7 +165,7 @@ export function Contact() {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <Card className="bg-gray-800 border-gray-700">
+            <Card className="bg-fuscous-grey border-fuscous-grey">
               <CardHeader>
                 <CardTitle className="text-white">Contact Information</CardTitle>
               </CardHeader>
@@ -174,21 +174,21 @@ export function Contact() {
                   <a
                     key={index}
                     href={info.href}
-                    className="flex items-center space-x-4 text-gray-300 hover:text-white transition-colors group"
+                    className="flex items-center space-x-4 text-light-grey hover:text-orange-red transition-colors group"
                   >
-                    <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center group-hover:bg-blue-600/30 transition-colors">
-                      <info.icon className="w-6 h-6 text-blue-400" />
+                    <div className="w-12 h-12 bg-orange-red/10 rounded-lg flex items-center justify-center group-hover:bg-orange-red/20 transition-colors">
+                      <info.icon className="w-6 h-6 text-orange-red" />
                     </div>
                     <div>
                       <div className="font-medium text-white">{info.label}</div>
-                      <div className="text-gray-400">{info.value}</div>
+                      <div className="text-light-grey">{info.value}</div>
                     </div>
                   </a>
                 ))}
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-800 border-gray-700">
+            <Card className="bg-fuscous-grey border-fuscous-grey">
               <CardHeader>
                 <CardTitle className="text-white">Follow Me</CardTitle>
               </CardHeader>
@@ -200,7 +200,7 @@ export function Contact() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 transition-colors ${social.color}`}
+                      className={`w-12 h-12 bg-deep-black rounded-lg flex items-center justify-center text-light-grey hover:text-orange-red transition-colors`}
                     >
                       <social.icon className="w-6 h-6" />
                     </a>
@@ -209,15 +209,15 @@ export function Contact() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-800 border-gray-700">
+            <Card className="bg-fuscous-grey border-fuscous-grey">
               <CardHeader>
                 <CardTitle className="text-white">Let's Work Together</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300 mb-4">
+                <p className="text-light-grey mb-4">
                   As a Computer Science student with a passion for data analysis and development, I'm eager to connect with professionals and organizations seeking skills in Python, Power BI, and data-driven solutions. If you have a project, internship, or collaboration in mind, or simply want to discuss technology and analytics, I'd love to hear from you!
                 </p>
-                <div className="space-y-2 text-sm text-gray-400">
+                <div className="space-y-2 text-sm text-light-grey">
                   <div>• Seeking internships and entry-level roles in Data Analytics or Software Development</div>
                   <div>• Experienced with Python, Pandas, Power BI, and SQL</div>
                   <div>• Open to freelance and remote opportunities</div>

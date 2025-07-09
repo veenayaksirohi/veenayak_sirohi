@@ -149,22 +149,22 @@ export function Certifications() {
   }
 
   return (
-    <section id="certifications" className="py-20">
+    <section id="certifications" className="py-20 bg-deep-black/90">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
               Certifications
             </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-light-grey max-w-2xl mx-auto">
             Professional certifications that validate my expertise and commitment to continuous learning
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certifications.map((cert) => (
-            <Card key={cert.id} className="bg-gray-800 border-gray-700 hover:border-blue-500/50 transition-colors">
+            <Card key={cert.id} className="bg-fuscous-grey border-fuscous-grey hover:border-orange-red/50 transition-colors">
               <CardHeader className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="relative">
@@ -176,28 +176,28 @@ export function Certifications() {
                       className="rounded-lg"
                     />
                     <div className="absolute -top-2 -right-2">
-                      <CheckCircle className="w-6 h-6 text-green-400 bg-gray-800 rounded-full" />
+                      <CheckCircle className="w-6 h-6 text-green-400 bg-fuscous-grey rounded-full" />
                     </div>
                   </div>
                 </div>
                 <CardTitle className="text-white text-lg leading-tight">{cert.title}</CardTitle>
-                <p className="text-blue-400 font-medium">{cert.issuer}</p>
+                <p className="text-orange-red font-medium">{cert.issuer}</p>
                 <div className="flex justify-center">
                   <Badge className={getStatusColor(cert.status)}>{getStatusText(cert.status)}</Badge>
                 </div>
               </CardHeader>
 
               <CardContent className="space-y-4">
-                <p className="text-gray-300 text-sm">{cert.description}</p>
+                <p className="text-light-grey text-sm">{cert.description}</p>
 
                 {/* Dates */}
                 <div className="space-y-2 text-sm">
-                  <div className="flex items-center text-gray-400">
+                  <div className="flex items-center text-light-grey">
                     <Calendar className="w-4 h-4 mr-2" />
                     <span>Issued: {cert.issueDate}</span>
                   </div>
                   {cert.expiryDate && (
-                    <div className="flex items-center text-gray-400">
+                    <div className="flex items-center text-light-grey">
                       <Calendar className="w-4 h-4 mr-2" />
                       <span>Expires: {cert.expiryDate}</span>
                     </div>
@@ -206,8 +206,8 @@ export function Certifications() {
 
                 {/* Level */}
                 <div className="flex items-center">
-                  <Award className="w-4 h-4 mr-2 text-yellow-400" />
-                  <span className="text-sm text-gray-300">Level: {cert.level}</span>
+                  <Award className="w-4 h-4 mr-2 text-orange-red" />
+                  <span className="text-sm text-light-grey">Level: {cert.level}</span>
                 </div>
 
                 {/* Skills */}
@@ -215,7 +215,7 @@ export function Certifications() {
                   <h4 className="font-semibold text-white mb-2 text-sm">Skills Validated:</h4>
                   <div className="flex flex-wrap gap-1">
                     {cert.skills.map((skill, index) => (
-                      <Badge key={index} variant="outline" className="text-xs border-blue-400 text-blue-400">
+                      <Badge key={index} variant="outline" className="text-xs border-orange-red text-orange-red">
                         {skill}
                       </Badge>
                     ))}
@@ -223,7 +223,7 @@ export function Certifications() {
                 </div>
 
                 {/* Credential ID */}
-                <div className="text-xs text-gray-500">Credential ID: {cert.credentialId}</div>
+                <div className="text-xs text-fuscous-grey">Credential ID: {cert.credentialId}</div>
 
                 {/* Verification Button */}
                 <a
@@ -235,7 +235,7 @@ export function Certifications() {
                   <Button
                     size="sm"
                     variant="outline"
-                    className="w-full border-gray-600 text-gray-300 hover:bg-gray-700 bg-transparent"
+                    className="w-full border-fuscous-grey text-light-grey hover:bg-orange-red/10 bg-transparent"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Verify Credential
@@ -249,28 +249,28 @@ export function Certifications() {
         {/* Summary Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
               {certifications.length}
             </div>
-            <div className="text-gray-400 text-sm">Total Certifications</div>
+            <div className="text-light-grey text-sm">Total Certifications</div>
           </div>
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
               {certifications.filter((cert) => cert.status === "active").length}
             </div>
-            <div className="text-gray-400 text-sm">Active Certifications</div>
+            <div className="text-light-grey text-sm">Active Certifications</div>
           </div>
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
               {certifications.filter((cert) => cert.level.includes("Professional")).length}
             </div>
-            <div className="text-gray-400 text-sm">Professional Level</div>
+            <div className="text-light-grey text-sm">Professional Level</div>
           </div>
           <div>
-            <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
               0
             </div>
-            <div className="text-gray-400 text-sm">Years Experience</div>
+            <div className="text-light-grey text-sm">Years Experience</div>
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ export function Footer() {
   const basePath = process.env.NODE_ENV === 'production' ? '/veenayak_sirohi' : '';
 
   return (
-    <footer className="bg-gray-900 border-t border-gray-800">
+    <footer className="bg-deep-black border-t border-fuscous-grey">
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -47,11 +47,11 @@ export function Footer() {
                 height={32}
                 className="rounded-full object-cover"
               />
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-orange-red to-fuscous-grey bg-clip-text text-transparent">
                 Veenayak Sirohi
               </span>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="text-light-grey mb-6 max-w-md">
               Computer Science student passionate about data analysis. Skilled in Python, Pandas, and Power BI for turning data into insights.
             </p>
             <div className="flex space-x-4">
@@ -61,7 +61,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+                  className="w-10 h-10 bg-fuscous-grey rounded-lg flex items-center justify-center text-light-grey hover:text-orange-red hover:bg-deep-black transition-colors"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />
@@ -78,7 +78,7 @@ export function Footer() {
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-light-grey hover:text-orange-red transition-colors"
                   >
                     {link.label}
                   </button>
@@ -90,7 +90,7 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-white font-semibold mb-4">Get In Touch</h3>
-            <div className="space-y-2 text-gray-400">
+            <div className="space-y-2 text-light-grey">
               <p>veenayaksirohi@gmail.com</p>
               <p>+91 7302223304</p>
               <p>Greater Noida, U.P</p>
@@ -99,7 +99,7 @@ export function Footer() {
               onClick={scrollToTop}
               size="sm"
               variant="outline"
-              className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
+              className="mt-4 border-fuscous-grey text-light-grey hover:bg-orange-red/10 bg-transparent"
             >
               <ArrowUp className="w-4 h-4 mr-2" />
               Back to Top
@@ -107,10 +107,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">© {currentYear} Veenayak Sirohi. All rights reserved.</p>
-          <p className="text-gray-400 text-sm flex items-center mt-4 md:mt-0">
-            Made with <Heart className="w-4 h-4 mx-1 text-red-400" /> using Next.js & Tailwind CSS
+        <div className="border-t border-fuscous-grey mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-light-grey text-sm">© {currentYear} Veenayak Sirohi. All rights reserved.</p>
+          <p className="text-light-grey text-sm flex items-center mt-4 md:mt-0">
+            Made with <Heart className="w-4 h-4 mx-1 text-orange-red" /> using Next.js & Tailwind CSS
           </p>
         </div>
       </div>

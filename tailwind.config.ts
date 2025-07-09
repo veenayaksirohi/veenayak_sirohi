@@ -59,6 +59,21 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        'orange-red': '#FF3C00',
+        'deep-black': '#070707',
+        'fuscous-grey': '#383738',
+        'light-grey': '#8F9194',
+      },
+      backgroundColor: {
+        'card': 'rgba(56, 55, 56, 0.1)',
+        'overlay': 'rgba(56, 55, 56, 0.2)',
+      },
+      borderColor: {
+        'subtle': 'rgba(56, 55, 56, 0.3)',
+        'accent': 'rgba(255, 60, 0, 0.5)',
+      },
+      boxShadow: {
+        'accent': '0 2px 8px 0 rgba(255, 60, 0, 0.2)',
       },
       borderRadius: {
         lg: "var(--radius)",
