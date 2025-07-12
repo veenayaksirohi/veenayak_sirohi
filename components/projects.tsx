@@ -260,8 +260,8 @@ export function Projects() {
                       </>
                     ) : (
                       <>
-                        <span>🚧</span>
-                        <span className="ml-1">In Progress</span>
+                        <span className="text-red-500">🚧</span>
+                        <span className="ml-1 text-red-500">In Progress</span>
                       </>
                     )}
                   </Badge>
