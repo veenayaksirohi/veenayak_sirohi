@@ -18,7 +18,7 @@ export function Projects() {
         "A modern e-commerce analytics dashboard with interactive charts, sales insights, and dynamic filtering.",
       longDescription:
         "Developed a comprehensive e-commerce sales dashboard to visualize sales, profit, and customer data. Features include interactive bar and pie charts, top states and customers by profit, and dynamic filtering by quarter and city. Built for actionable business intelligence.",
-      image: "/E-Commerce_Dashboard.png",
+      image: "/veenayak_sirohi/E-Commerce_Dashboard.png",
       category: "data-analytics",
       subcategory: "data-analytics",
       technologies: ["Power BI", "DAX", "Data Visualization", "Business Analytics"],
@@ -41,7 +41,7 @@ export function Projects() {
         "An HR analytics dashboard for visualizing employee attrition, demographics, and workforce trends.",
       longDescription:
         "Created an HR analytics dashboard to analyze employee attrition, salary, education, and job roles. The dashboard features interactive visualizations for gender, age group, education field, and attrition by department, providing actionable insights for HR decision-making.",
-      image: "/H.R._Analytics.png",
+      image: "/veenayak_sirohi/H.R._Analytics.png",
       category: "data-analytics",
       subcategory: "data-analytics",
       technologies: ["Power BI", "DAX", "Data Visualization", "HR Analytics"],
