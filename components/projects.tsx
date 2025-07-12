@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github, Filter } from "lucide-react"
+import { ExternalLink, Github, Filter, Check } from "lucide-react"
 import Image from "next/image"
 
 export function Projects() {
@@ -253,7 +253,17 @@ export function Projects() {
                     variant={project.status === "completed" ? "default" : "secondary"}
                     className={project.status === "completed" ? "bg-green-600" : "bg-orange-500 text-white"}
                   >
-                    {project.status === "completed" ? <span>✔️ Completed</span> : <span>🚧 In Progress</span>}
+                    {project.status === "completed" ? (
+                      <>
+                        <Check className="inline w-5 h-5 text-orange-500" strokeWidth={3} />
+                        <span className="ml-1">Completed</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>🚧</span>
+                        <span className="ml-1">In Progress</span>
+                      </>
+                    )}
                   </Badge>
                 </div>
               </div>
