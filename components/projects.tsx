@@ -13,6 +13,52 @@ export function Projects() {
   const projects = [
     {
       id: 1,
+      title: "E-Commerce Dashboard",
+      description:
+        "A modern e-commerce analytics dashboard with interactive charts, sales insights, and dynamic filtering.",
+      longDescription:
+        "Developed a comprehensive e-commerce sales dashboard to visualize sales, profit, and customer data. Features include interactive bar and pie charts, top states and customers by profit, and dynamic filtering by quarter and city. Built for actionable business intelligence.",
+      image: "/E-Commerce_Dashboard.png",
+      category: "data-analytics",
+      subcategory: "data-analytics",
+      technologies: ["Power BI", "DAX", "Data Visualization", "Business Analytics"],
+      features: [
+        "Interactive sales and profit charts",
+        "Top states and customers by profit",
+        "Dynamic filtering by quarter and city",
+        "Category and payment mode breakdowns",
+        "Responsive dashboard layout",
+        "Business intelligence insights",
+      ],
+      liveUrl: null,
+      githubUrl: "https://github.com/veenayaksirohi/E-Commerse_Dashboard",
+      status: "completed",
+    },
+    {
+      id: 2,
+      title: "H.R. Analytics Dashboard",
+      description:
+        "An HR analytics dashboard for visualizing employee attrition, demographics, and workforce trends.",
+      longDescription:
+        "Created an HR analytics dashboard to analyze employee attrition, salary, education, and job roles. The dashboard features interactive visualizations for gender, age group, education field, and attrition by department, providing actionable insights for HR decision-making.",
+      image: "/H.R._Analytics.png",
+      category: "data-analytics",
+      subcategory: "data-analytics",
+      technologies: ["Power BI", "DAX", "Data Visualization", "HR Analytics"],
+      features: [
+        "Attrition analysis by multiple factors",
+        "Interactive bar and pie charts",
+        "Salary and job role breakdowns",
+        "Gender and age group insights",
+        "Responsive and accessible design",
+        "Workforce trend visualization",
+      ],
+      liveUrl: null,
+      githubUrl: "https://github.com/veenayaksirohi/H.R_Analytics",
+      status: "completed",
+    },
+    {
+      id: 3,
       title: "E-Commerce Platform",
       description:
         "A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
@@ -34,7 +80,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 2,
+      id: 4,
       title: "Task Management App",
       description:
         "A collaborative task management application with real-time updates and team collaboration features.",
@@ -56,7 +102,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 3,
+      id: 5,
       title: "Weather Dashboard",
       description: "A responsive weather application with location-based forecasts and interactive maps.",
       longDescription:
@@ -77,7 +123,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 4,
+      id: 6,
       title: "Social Media API",
       description: "A RESTful API for a social media platform with authentication, posts, and real-time messaging.",
       longDescription:
@@ -98,7 +144,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 5,
+      id: 7,
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website built with Next.js and deployed on Vercel.",
       longDescription:
@@ -119,7 +165,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 6,
+      id: 8,
       title: "AI Chat Application",
       description: "An AI-powered chat application with natural language processing and conversation memory.",
       longDescription:
@@ -143,12 +189,18 @@ export function Projects() {
 
   const categories = [
     { id: "all", label: "All Projects" },
+    { id: "data-analytics", label: "Data Analytics" },
     { id: "fullstack", label: "Full Stack" },
     { id: "frontend", label: "Frontend" },
     { id: "backend", label: "Backend" },
   ]
 
-  const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.category === filter)
+  // Update filter logic to support 'data-analytics' tab
+  const filteredProjects = filter === "all"
+    ? projects
+    : filter === "data-analytics"
+      ? projects.filter((project) => project.subcategory === "data-analytics")
+      : projects.filter((project) => project.category === filter)
 
   return (
     <section id="projects" className="py-20 bg-black">
@@ -194,7 +246,7 @@ export function Projects() {
                   alt={project.title}
                   width={500}
                   height={300}
-                  className="w-full h-48 object-cover transition-transform duration-200 group-hover:scale-105"
+                  className="w-full h-48 object-cover transition-transform duration-200 group-hover:scale-105 brightness-75"
                 />
                 <div className="absolute top-4 right-4">
                   <Badge
@@ -248,12 +300,19 @@ export function Projects() {
                     </Button>
                   )}
                   <Button
+                    asChild
                     size="sm"
                     variant="outline"
                     className="flex-1 border-2 border-orange-500 text-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 hover:text-white hover:scale-105 transition-all duration-200 bg-transparent focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-offset-2"
                   >
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      Code
+                    </a>
                   </Button>
                 </div>
               </CardContent>
