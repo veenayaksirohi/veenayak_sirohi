@@ -13,6 +13,29 @@ export function Projects() {
   const projects = [
     {
       id: 2,
+      title: "Currency Converter App",
+      description:
+        "A responsive currency converter with real-time exchange rates and an intuitive interface built using React and Vite.",
+      longDescription:
+        "Built a modern currency converter app to convert between global currencies with real-time exchange rate data. Features include bidirectional conversion, currency swapping, searchable dropdowns, and automatic calculation. The UI is enhanced with Tailwind CSS and smooth interactions. Built using React 19, Vite, and custom hooks for clean, modular code.",
+      image: "/veenayak_sirohi/CurrencyConverter.png",
+      category: "web-development",
+      subcategory: "react-projects",
+      technologies: ["React 19", "Vite", "Tailwind CSS", "Custom Hooks", "Currency API"],
+      features: [
+        "Real-time exchange rates with @fawazahmed0/currency-api",
+        "Bidirectional currency conversion",
+        "Swap functionality between currencies",
+        "Responsive and modern UI with Tailwind CSS",
+        "Auto-updates on value input",
+        "Searchable dropdown for currency selection"
+      ],
+      liveUrl: null,
+      githubUrl: "https://github.com/veenayaksirohi/06currencyconverter",
+      status: "completed"
+    },    
+    {
+      id: 2,
       title: "Parallax Webpage",
       description:
         "A modern, responsive parallax scrolling webpage with smooth animations and glassmorphism design.",
