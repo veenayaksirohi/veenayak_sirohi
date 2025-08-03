@@ -12,6 +12,29 @@ export function Projects() {
 
   const projects = [
     {
+      id: 2,
+      title: "Parallax Webpage",
+      description:
+        "A modern, responsive parallax scrolling webpage with smooth animations and glassmorphism design.",
+      longDescription:
+        "Created a visually engaging parallax scrolling webpage using modern CSS3 techniques. The project includes multiple parallax sections, glassmorphism-styled content cards, responsive layout, and smooth hover animations. Ideal for portfolios or landing pages.",
+      image: "/veenayak_sirohi/Parallax-Webpage.png",
+      category: "web-development",
+      subcategory: "frontend",
+      technologies: ["HTML5", "CSS3", "Flexbox", "Transforms", "Backdrop Filters"],
+      features: [
+        "Parallax scrolling with fixed background sections",
+        "Glassmorphism design with blur and transparency",
+        "Responsive layout with flexbox",
+        "Smooth hover animations and transitions",
+        "Viewport-based sizing (vh, vw)",
+        "High-resolution Unsplash backgrounds"
+      ],
+      liveUrl: null,
+      githubUrl: "https://github.com/veenayaksirohi/Parallax-Webpage",
+      status: "completed"
+    },    
+    {
       id: 1,
       title: "E-Commerce Dashboard",
       description:
