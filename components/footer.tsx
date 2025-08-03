@@ -41,7 +41,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Image
-                src={basePath + '/profile-avatar.png'}
+                src={basePath + '/profile-avatar.jpg'}
                 alt="Profile Avatar"
                 width={32}
                 height={32}
