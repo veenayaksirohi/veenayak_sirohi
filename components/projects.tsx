@@ -12,15 +12,14 @@ export function Projects() {
 
   const projects = [
     {
-      id: 2,
+      id: 1,
       title: "Currency Converter App",
       description:
         "A responsive currency converter with real-time exchange rates and an intuitive interface built using React and Vite.",
       longDescription:
         "Built a modern currency converter app to convert between global currencies with real-time exchange rate data. Features include bidirectional conversion, currency swapping, searchable dropdowns, and automatic calculation. The UI is enhanced with Tailwind CSS and smooth interactions. Built using React 19, Vite, and custom hooks for clean, modular code.",
       image: "/veenayak_sirohi/CurrencyConverter.png",
-      category: "web-development",
-      subcategory: "react-projects",
+      category: "frontend",
       technologies: ["React 19", "Vite", "Tailwind CSS", "Custom Hooks", "Currency API"],
       features: [
         "Real-time exchange rates with @fawazahmed0/currency-api",
@@ -42,8 +41,7 @@ export function Projects() {
       longDescription:
         "Created a visually engaging parallax scrolling webpage using modern CSS3 techniques. The project includes multiple parallax sections, glassmorphism-styled content cards, responsive layout, and smooth hover animations. Ideal for portfolios or landing pages.",
       image: "/veenayak_sirohi/Parallax-Webpage.png",
-      category: "web-development",
-      subcategory: "frontend",
+      category: "frontend",
       technologies: ["HTML5", "CSS3", "Flexbox", "Transforms", "Backdrop Filters"],
       features: [
         "Parallax scrolling with fixed background sections",
@@ -58,7 +56,7 @@ export function Projects() {
       status: "completed"
     },    
     {
-      id: 1,
+      id: 3,
       title: "E-Commerce Dashboard",
       description:
         "A modern e-commerce analytics dashboard with interactive charts, sales insights, and dynamic filtering.",
@@ -81,7 +79,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 2,
+      id: 4,
       title: "H.R. Analytics Dashboard",
       description:
         "An HR analytics dashboard for visualizing employee attrition, demographics, and workforce trends.",
@@ -104,7 +102,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 3,
+      id: 5,
       title: "E-Commerce Platform",
       description:
         "A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
@@ -126,7 +124,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 4,
+      id: 6,
       title: "Task Management App",
       description:
         "A collaborative task management application with real-time updates and team collaboration features.",
@@ -148,7 +146,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 5,
+      id: 7,
       title: "Weather Dashboard",
       description: "A responsive weather application with location-based forecasts and interactive maps.",
       longDescription:
@@ -169,7 +167,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 6,
+      id: 8,
       title: "Social Media API",
       description: "A RESTful API for a social media platform with authentication, posts, and real-time messaging.",
       longDescription:
@@ -190,7 +188,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 7,
+      id: 9,
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website built with Next.js and deployed on Vercel.",
       longDescription:
@@ -211,7 +209,7 @@ export function Projects() {
       status: "completed",
     },
     {
-      id: 8,
+      id: 10,
       title: "AI Chat Application",
       description: "An AI-powered chat application with natural language processing and conversation memory.",
       longDescription:
@@ -241,7 +239,7 @@ export function Projects() {
     { id: "backend", label: "Backend" },
   ]
 
-  // Update filter logic to support 'data-analytics' tab
+  // Update filter logic to support subcategory filtering
   const filteredProjects = filter === "all"
     ? projects
     : filter === "data-analytics"
