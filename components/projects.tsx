@@ -31,7 +31,7 @@ export function Projects() {
         "High-resolution Unsplash backgrounds"
       ],
       liveUrl: null,
-      githubUrl: "https://github.com/veenayaksirohi/Parallax-Webpage",
+      githubUrl: "https://github.com/veenayaksirohi/WebDev_Projects/tree/master/Parallax%20Webpage",
       status: "completed"
     },    
     {
