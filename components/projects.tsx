@@ -31,7 +31,7 @@ export function Projects() {
         "Searchable dropdown for currency selection"
       ],
       liveUrl: null,
-      githubUrl: "https://github.com/veenayaksirohi/06currencyconverter",
+      githubUrl: "https://github.com/veenayaksirohi/WebDev_Projects/tree/master/currencyConverter",
       status: "completed"
     },    
     {
