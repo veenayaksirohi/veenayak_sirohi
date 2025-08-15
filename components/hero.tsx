@@ -124,7 +124,7 @@ export function Hero() {
                 </Button>
               </a>
               <a
-                href="https://www.linkedin.com/in/veenayak_sirohi-ab30ab227/"
+                href="https://www.linkedin.com/in/veenayaksirohi"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

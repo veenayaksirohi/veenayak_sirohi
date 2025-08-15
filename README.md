@@ -155,7 +155,7 @@ MIT License
 ## 💬 Support
 
 - **Email**: veenayaksirohi@gmail.com
-- **LinkedIn**: [Veenayak Sirohi LinkedIn](https://www.linkedin.com/in/veenayak-sirohi-ab30ab227)
+- **LinkedIn**: [Veenayak Sirohi LinkedIn](https://www.linkedin.com/in/veenayaksirohi)
 - **GitHub**: [veenayaksirohi](https://github.com/veenayaksirohi)
 
 ---

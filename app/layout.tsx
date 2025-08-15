@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "A modern, responsive portfolio website for Veenayak Sirohi. Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies. View projects, skills, certifications, and experience.",
   keywords: "Veenayak Sirohi, portfolio, full stack developer, react, next.js, node.js, typescript, web development, projects, skills, certifications, resume, github, linkedin",
-  authors: [{ name: "Veenayak Sirohi", url: "https://www.linkedin.com/in/veenayak-sirohi-ab30ab227" }],
+  authors: [{ name: "Veenayak Sirohi", url: "https://www.linkedin.com/in/veenayaksirohi" }],
   creator: "Veenayak Sirohi",
   openGraph: {
     type: "website",

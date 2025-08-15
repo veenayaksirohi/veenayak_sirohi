@@ -62,7 +62,7 @@ export function Contact() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/veenayak_sirohi-ab30ab227/",
+      href: "https://www.linkedin.com/in/veenayaksirohi",
       color: "hover:text-orange-500",
     },
     {
