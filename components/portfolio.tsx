@@ -24,6 +24,15 @@ const siteBase =
 const resumePath = `${siteBase}/veenayak_Resume.pdf`;
 const githubUrl = "https://github.com/veenayaksirohi/";
 const linkedinUrl = "https://www.linkedin.com/in/veenayaksirohi/";
+const navItems = [
+  ["about", "About"],
+  ["work", "Experience"],
+  ["skills", "Skills"],
+  ["projects", "Projects"],
+  ["education", "Education"],
+  ["certifications", "Certifications"],
+  ["contact", "Contact"],
+] as const;
 
 const skills = [
   { title: "Programming & Scripting", items: ["Python", "Bash"] },
@@ -297,7 +306,7 @@ function ProjectCard({
   featured = false,
 }: ProjectCardProps) {
   return (
-    <article className="flex flex-col overflow-hidden border border-zinc-700 bg-[#101312]">
+    <article className="group flex flex-col overflow-hidden border border-zinc-700 bg-[#101312] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-orange-300/70 hover:shadow-lg hover:shadow-orange-950/20 motion-reduce:transform-none motion-reduce:transition-none">
       <div className="relative aspect-[16/9] w-full bg-zinc-900">
         {image ? (
           <Image
@@ -364,24 +373,80 @@ function ProjectCard({
 export function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-    const updateVisibility = () => setShowBackToTop(window.scrollY > 300);
+    const sections = document.querySelectorAll<HTMLElement>(
+      "main > section:not(#hero)",
+    );
+    if (!("IntersectionObserver" in window)) {
+      sections.forEach((section) => section.classList.add("is-visible"));
+      return;
+    }
 
-    window.addEventListener("scroll", updateVisibility);
-    updateVisibility();
-    return () => window.removeEventListener("scroll", updateVisibility);
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -48px 0px" },
+    );
+    sections.forEach((section) => {
+      section.classList.add("section-reveal");
+      revealObserver.observe(section);
+    });
+
+    return () => revealObserver.disconnect();
   }, []);
 
-  const navItems = [
-    ["about", "About"],
-    ["work", "Experience"],
-    ["skills", "Skills"],
-    ["projects", "Projects"],
-    ["education", "Education"],
-    ["certifications", "Certifications"],
-    ["contact", "Contact"],
-  ];
+  useEffect(() => {
+    const sections = ["hero", ...navItems.map(([id]) => id)]
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => section !== null);
+    if (!("IntersectionObserver" in window)) return;
+
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-20% 0px -65% 0px", threshold: [0, 0.1, 0.25, 0.5] },
+    );
+    sections.forEach((section) => sectionObserver.observe(section));
+    return () => sectionObserver.disconnect();
+  }, []);
+
+  useEffect(() => {
+    let frame = 0;
+    const updateVisibility = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        setShowBackToTop(window.scrollY > 300);
+        frame = 0;
+      });
+    };
+
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+    updateVisibility();
+    return () => {
+      window.removeEventListener("scroll", updateVisibility);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
 
   return (
     <div className="min-h-screen bg-[#101312] text-zinc-100 selection:bg-orange-400 selection:text-zinc-950">
@@ -403,7 +468,8 @@ export function Portfolio() {
               <a
                 key={id}
                 href={`#${id}`}
-                className="text-sm text-zinc-400 transition-colors hover:text-white"
+                aria-current={activeSection === id ? "location" : undefined}
+                className={`relative py-2 text-sm transition-colors after:absolute after:inset-x-0 after:-bottom-1 after:h-0.5 after:origin-left after:rounded-full after:bg-orange-400 after:transition-transform ${activeSection === id ? "text-orange-300 after:scale-x-100" : "text-zinc-400 after:scale-x-0 hover:text-white"}`}
               >
                 {label}
               </a>
@@ -418,23 +484,28 @@ export function Portfolio() {
           </div>
           <button
             type="button"
-            className="rounded p-2 text-zinc-200 hover:bg-white/10 md:hidden"
+            className="rounded p-2 text-zinc-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 md:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <X size={21} /> : <Menu size={21} />}
           </button>
         </nav>
         {menuOpen && (
-          <div className="border-t border-white/10 bg-[#101312] px-5 py-3 md:hidden">
+          <div
+            id="mobile-navigation"
+            className="border-t border-white/10 bg-[#101312] px-5 py-3 md:hidden"
+          >
             <div className="mx-auto grid max-w-6xl grid-cols-2 gap-1">
               {navItems.map(([id, label]) => (
                 <a
                   key={id}
                   href={`#${id}`}
                   onClick={() => setMenuOpen(false)}
-                  className="rounded px-3 py-2 text-sm text-zinc-300 hover:bg-white/5 hover:text-white"
+                  aria-current={activeSection === id ? "location" : undefined}
+                  className={`rounded px-3 py-2 text-sm transition-colors ${activeSection === id ? "bg-orange-400/10 text-orange-300" : "text-zinc-300 hover:bg-white/5 hover:text-white"}`}
                 >
                   {label}
                 </a>
@@ -454,7 +525,7 @@ export function Portfolio() {
       <main>
         <section
           id="hero"
-          className="relative isolate flex min-h-[720px] scroll-mt-16 items-center overflow-hidden border-b border-white/10 pt-16"
+          className="relative isolate flex min-h-[620px] scroll-mt-16 items-center overflow-hidden border-b border-white/10 pt-16"
         >
           <div
             aria-hidden="true"
@@ -465,8 +536,8 @@ export function Portfolio() {
               backgroundSize: "48px 48px",
             }}
           />
-          <div className="mx-auto grid w-full max-w-6xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[1.35fr_.65fr] lg:items-center">
-            <div className="animate-[fadeIn_.7s_ease-out_both]">
+          <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-14 sm:px-8 sm:py-16 lg:grid-cols-[1.35fr_.65fr] lg:items-center lg:py-16">
+            <div className="hero-copy-enter">
               <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-orange-300/30 bg-orange-300/10 px-3 py-1.5 text-sm text-orange-200">
                 <span className="h-2 w-2 rounded-full bg-orange-400" /> DevOps
                 Engineer · SarvaGram
@@ -524,10 +595,10 @@ export function Portfolio() {
               </div>
             </div>
             <aside
-              className="flex items-center gap-4 border-l border-orange-300/40 py-4 pl-5 lg:block lg:pl-8"
+              className="hero-portrait-enter flex items-center gap-4 border-l border-orange-300/40 py-4 pl-5 lg:block lg:pl-8"
               aria-label="Portrait and current focus"
             >
-              <div className="relative h-32 w-28 shrink-0 overflow-hidden border border-zinc-700 sm:h-40 sm:w-36 lg:h-72 lg:w-full lg:max-w-[300px]">
+              <div className="portrait-float relative h-32 w-28 shrink-0 overflow-hidden border border-zinc-700 sm:h-40 sm:w-36 lg:h-72 lg:w-full lg:max-w-[300px]">
                 <Image
                   src={`${siteBase}/profile-avatar.jpg`}
                   alt="Portrait of Veenayak Sirohi"
@@ -558,7 +629,7 @@ export function Portfolio() {
         </section>
 
         <section id="about" className="scroll-mt-20 border-b border-white/10">
-          <div className="mx-auto grid max-w-6xl gap-8 px-5 py-20 sm:px-8 md:grid-cols-[.6fr_1.4fr]">
+          <div className="mx-auto grid max-w-6xl gap-8 px-5 py-14 sm:px-8 md:grid-cols-[.6fr_1.4fr] md:py-16">
             <SectionHeading eyebrow="Profile" title="About me" />
             <div className="max-w-3xl text-base leading-8 text-zinc-300">
               <p>
