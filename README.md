@@ -3,6 +3,8 @@
 [🌐 **Live Website**](https://veenayaksirohi.github.io/veenayak_sirohi/)
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-blue?logo=next.js)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2496ED?logo=docker&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-4.x-blue?logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38bdf8?logo=tailwindcss&logoColor=white)
 ![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Components-8b5cf6?logo=react)
@@ -11,7 +13,7 @@
 
 > "Design is not just what it looks like and feels like. Design is how it works." — Steve Jobs
 
-A modern, responsive portfolio website for Veenayak Sirohi, Full Stack Developer. Built with Next.js, TypeScript, and Tailwind CSS. Showcases projects, skills, certifications, education, and contact information. Optimized for performance, accessibility, and SEO. Deployed on GitHub Pages.
+A responsive portfolio for Veenayak Sirohi, DevOps Engineer at SarvaGram. Built with Next.js, TypeScript, and Tailwind CSS, with a static export for GitHub Pages and Docker Compose.
 
 ---
 
@@ -96,7 +98,8 @@ veenayak_sirohi/
 - **Styling**: Tailwind CSS
 - **UI Components**: shadcn/ui
 - **Icons**: Lucide React
-- **Deployment**: GitHub Pages
+- **Containerization**: Docker, Docker Compose, and Nginx
+- **Deployment**: GitHub Pages or Docker Compose
 
 ## 🚦 Getting Started
 
@@ -117,14 +120,33 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+### Docker Compose
+
+Requires Docker Engine and Docker Compose v2.22 or later. Build the static site, start Nginx, and enable file watching:
+
+```bash
+docker compose up --build --watch
+```
+
+Open [http://localhost:8080](http://localhost:8080). Compose watches the app, components, public assets, and build configuration, rebuilding the static site when they change. This command stays attached in the terminal. Press `Ctrl+C` to stop watching.
+
+To run detached without watch mode, use:
+
+```bash
+docker compose up --build -d
+```
+
+To use another host port in watch mode, set `PORT`, for example `PORT=8081 docker compose up --build --watch`. Stop detached containers with `docker compose down`.
+
 ## 🚀 Deployment
 
 - Automatic deployment via GitHub Actions to GitHub Pages on every push to main.
 - Manual deployment: `npm run build` and `npm run export`.
+- Container deployment: `docker compose up --build -d`.
 
 ## 🎨 Customization
 
-- Update personal info in `components/hero.tsx`, `about.tsx`, `education.tsx`, `work.tsx`, `skills.tsx`, `projects.tsx`, `certifications.tsx`, `contact.tsx`.
+- Update portfolio content in `components/portfolio.tsx`.
 - Update SEO metadata in `app/layout.tsx`.
 - Change colors in `tailwind.config.ts`.
 - Replace images in `public/`.

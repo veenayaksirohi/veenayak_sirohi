@@ -1,35 +1,11 @@
-import { Navigation } from "@/components/navigation"
-import { Hero } from "@/components/hero"
-import { About } from "@/components/about"
-import Education from "@/components/education"
-import { Work } from "@/components/work"
-import { Skills } from "@/components/skills"
-import { Projects } from "@/components/projects"
-import { Certifications } from "@/components/certifications"
-import { Contact } from "@/components/contact"
-import { Footer } from "@/components/footer"
-import { BackToTop } from "@/components/back-to-top"
+import { Portfolio } from "@/components/portfolio";
 
 export const metadata = {
-  title: "Veenayak Sirohi - Portfolio"
-}
+  title: "Veenayak Sirohi | DevOps Engineer",
+  description:
+    "Portfolio of Veenayak Sirohi, DevOps Engineer at SarvaGram, working across AWS, CI/CD, infrastructure automation, and DevSecOps.",
+};
 
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Education />
-        <Work />
-        <Skills />
-        <Projects />
-        <Certifications />
-        <Contact />
-      </main>
-      <Footer />
-      <BackToTop />
-    </div>
-  )
+  return <Portfolio />;
 }
