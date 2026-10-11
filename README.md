@@ -104,20 +104,24 @@ veenayak_sirohi/
 ## 🚦 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+
 - Git
 
 ### Installation
-   ```bash
-   git clone https://github.com/veenayaksirohi/veenayak_sirohi.git
-   cd veenayak_sirohi
-   npm install
-   ```
+
+```bash
+git clone https://github.com/veenayaksirohi/veenayak_sirohi.git
+cd veenayak_sirohi
+npm install
+```
 
 ### Development
+
 ```bash
 npm run dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Docker Compose

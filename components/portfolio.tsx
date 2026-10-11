@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import Image from "next/image"
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   ArrowDownRight,
   ArrowUp,
@@ -17,12 +17,13 @@ import {
   ShieldCheck,
   type LucideIcon,
   X,
-} from "lucide-react"
+} from "lucide-react";
 
-const siteBase = process.env.NODE_ENV === "production" ? "/veenayak_sirohi" : ""
-const resumePath = `${siteBase}/veenayak_Resume.pdf`
-const githubUrl = "https://github.com/veenayaksirohi/"
-const linkedinUrl = "https://www.linkedin.com/in/veenayaksirohi/"
+const siteBase =
+  process.env.NODE_ENV === "production" ? "/veenayak_sirohi" : "";
+const resumePath = `${siteBase}/veenayak_Resume.pdf`;
+const githubUrl = "https://github.com/veenayaksirohi/";
+const linkedinUrl = "https://www.linkedin.com/in/veenayaksirohi/";
 
 const skills = [
   { title: "Programming & Scripting", items: ["Python", "Bash"] },
@@ -70,7 +71,7 @@ const skills = [
       "Role-Based Access Control (RBAC)",
     ],
   },
-]
+];
 
 const devSecOpsTools = [
   "AWS EKS",
@@ -84,13 +85,13 @@ const devSecOpsTools = [
   "DefectDojo",
   "Prometheus",
   "Grafana",
-]
+];
 
 const securityChecks = [
   "Secret scanning, static analysis, dependency analysis and SBOM generation",
   "Container image and infrastructure-as-code scanning",
   "Dynamic application security testing and vulnerability management",
-]
+];
 
 const additionalProjects = [
   {
@@ -100,7 +101,8 @@ const additionalProjects = [
       "A responsive currency converter with exchange-rate lookup, currency search, and conversion between currencies.",
     technologies: ["React", "Vite", "Tailwind CSS", "Currency API"],
     image: "CurrencyConverter.png",
-    repository: "https://github.com/veenayaksirohi/WebDev_Projects/tree/master/currencyConverter",
+    repository:
+      "https://github.com/veenayaksirohi/WebDev_Projects/tree/master/currencyConverter",
   },
   {
     title: "Parallax Webpage — Responsive Parallax Experience",
@@ -109,9 +111,10 @@ const additionalProjects = [
       "A responsive webpage using parallax backgrounds, CSS effects, and alternating content sections.",
     technologies: ["HTML5", "CSS3", "Flexbox", "Transforms"],
     image: "Parallax-Webpage.png",
-    repository: "https://github.com/veenayaksirohi/WebDev_Projects/tree/master/Parallax%20Webpage",
+    repository:
+      "https://github.com/veenayaksirohi/WebDev_Projects/tree/master/Parallax%20Webpage",
   },
-]
+];
 
 const experience = [
   {
@@ -138,7 +141,7 @@ const experience = [
       "Worked across backend API development, database access, authentication, containerization, and automated testing.",
     current: false,
   },
-]
+];
 
 const education = [
   {
@@ -167,7 +170,7 @@ const education = [
     detail: "2019 · 76.4%",
     logo: `${siteBase}/dewan.png`,
   },
-]
+];
 
 const cdacModules = [
   ["Fundamentals of Computer Networks", "36/40"],
@@ -177,17 +180,21 @@ const cdacModules = [
   ["Cyber Forensics and Public Key Infrastructure", "33/40"],
   ["Security Concepts", "37/40"],
   ["Programming Concepts", "34/40"],
-]
+];
 
 type Certification = {
-  title: string
-  issuer: string
-  certificateFile?: string
-  logoFile?: string
-}
+  title: string;
+  issuer: string;
+  certificateFile?: string;
+  logoFile?: string;
+};
 
 const certifications: Certification[] = [
-  { title: "Introduction to Cybersecurity", issuer: "Cisco", logoFile: "cisco-logo.svg" },
+  {
+    title: "Introduction to Cybersecurity",
+    issuer: "Cisco",
+    logoFile: "cisco-logo.svg",
+  },
   {
     title: "Docker Foundations Professional Certificate",
     issuer: "Docker",
@@ -197,7 +204,8 @@ const certifications: Certification[] = [
     title: "Programming, Data Structures and Algorithms using Python",
     issuer: "NPTEL",
     logoFile: "nptel.jpg",
-    certificateFile: "Programming, Data Structures And Algorithms Using Python_page1.jpg",
+    certificateFile:
+      "Programming, Data Structures And Algorithms Using Python_page1.jpg",
   },
   {
     title: "Fundamentals of Cloud Security",
@@ -214,7 +222,8 @@ const certifications: Certification[] = [
   {
     title: "The Fundamentals of SOC (Security Operations Center)",
     issuer: "Palo Alto Networks (Beacon)",
-    certificateFile: "The Fundamentals of SOC (Security Operations Center) _ Beacon_page1.jpg",
+    certificateFile:
+      "The Fundamentals of SOC (Security Operations Center) _ Beacon_page1.jpg",
     logoFile: "palo-alto-networks-logo-png_seeklogo-384891.png",
   },
   {
@@ -223,26 +232,30 @@ const certifications: Certification[] = [
     certificateFile: "Introduction to Cybersecurity _ Beacon_page1.jpg",
     logoFile: "palo-alto-networks-logo-png_seeklogo-384891.png",
   },
-]
+];
 
 function SectionHeading({
   eyebrow,
   title,
   description,
 }: {
-  eyebrow: string
-  title: string
-  description?: string
+  eyebrow: string;
+  title: string;
+  description?: string;
 }) {
   return (
     <div className="mb-10 max-w-2xl">
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-orange-400">
         {eyebrow}
       </p>
-      <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{title}</h2>
-      {description && <p className="mt-4 leading-7 text-zinc-400">{description}</p>}
+      <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        {title}
+      </h2>
+      {description && (
+        <p className="mt-4 leading-7 text-zinc-400">{description}</p>
+      )}
     </div>
-  )
+  );
 }
 
 function Tags({ items }: { items: string[] }) {
@@ -257,20 +270,20 @@ function Tags({ items }: { items: string[] }) {
         </li>
       ))}
     </ul>
-  )
+  );
 }
 
 type ProjectCardProps = {
-  title: string
-  category: string
-  description: string
-  technologies: string[]
-  icon?: LucideIcon
-  image?: string
-  highlights?: string[]
-  repository?: string
-  featured?: boolean
-}
+  title: string;
+  category: string;
+  description: string;
+  technologies: string[];
+  icon?: LucideIcon;
+  image?: string;
+  highlights?: string[];
+  repository?: string;
+  featured?: boolean;
+};
 
 function ProjectCard({
   title,
@@ -295,7 +308,10 @@ function ProjectCard({
             className="object-cover"
           />
         ) : (
-          <div className="flex h-full items-center justify-center" aria-hidden="true">
+          <div
+            className="flex h-full items-center justify-center"
+            aria-hidden="true"
+          >
             <Icon className="text-orange-300" size={48} strokeWidth={1.5} />
           </div>
         )}
@@ -305,9 +321,15 @@ function ProjectCard({
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-orange-300">
             {category}
           </p>
-          {featured && <span className="shrink-0 text-xs text-zinc-500">Featured project</span>}
+          {featured && (
+            <span className="shrink-0 text-xs text-zinc-500">
+              Featured project
+            </span>
+          )}
         </div>
-        <h3 className="text-xl font-semibold leading-tight text-white">{title}</h3>
+        <h3 className="text-xl font-semibold leading-tight text-white">
+          {title}
+        </h3>
         <p className="mt-3 leading-7 text-zinc-300">{description}</p>
         {highlights && (
           <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-400">
@@ -336,20 +358,20 @@ function ProjectCard({
         </div>
       </div>
     </article>
-  )
+  );
 }
 
 export function Portfolio() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [showBackToTop, setShowBackToTop] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
-    const updateVisibility = () => setShowBackToTop(window.scrollY > 300)
+    const updateVisibility = () => setShowBackToTop(window.scrollY > 300);
 
-    window.addEventListener("scroll", updateVisibility)
-    updateVisibility()
-    return () => window.removeEventListener("scroll", updateVisibility)
-  }, [])
+    window.addEventListener("scroll", updateVisibility);
+    updateVisibility();
+    return () => window.removeEventListener("scroll", updateVisibility);
+  }, []);
 
   const navItems = [
     ["about", "About"],
@@ -359,7 +381,7 @@ export function Portfolio() {
     ["education", "Education"],
     ["certifications", "Certifications"],
     ["contact", "Contact"],
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-[#101312] text-zinc-100 selection:bg-orange-400 selection:text-zinc-950">
@@ -446,16 +468,19 @@ export function Portfolio() {
           <div className="mx-auto grid w-full max-w-6xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[1.35fr_.65fr] lg:items-center">
             <div className="animate-[fadeIn_.7s_ease-out_both]">
               <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-orange-300/30 bg-orange-300/10 px-3 py-1.5 text-sm text-orange-200">
-                <span className="h-2 w-2 rounded-full bg-orange-400" /> DevOps Engineer · SarvaGram
+                <span className="h-2 w-2 rounded-full bg-orange-400" /> DevOps
+                Engineer · SarvaGram
               </p>
               <h1 className="max-w-3xl text-5xl font-bold leading-[1.06] tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Veenayak <span className="text-orange-400">Sirohi</span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-                I am a DevOps Engineer at SarvaGram with a background in Computer Science and CDAC
-                PGCP-ITISS. I work with cloud infrastructure, CI/CD automation, containerization,
-                infrastructure as code, monitoring, and application security. I enjoy building
-                secure, reliable, and automated software delivery workflows.
+                I am a DevOps Engineer at SarvaGram with a background in
+                Computer Science and CDAC PGCP-ITISS. I work with cloud
+                infrastructure, CI/CD automation, containerization,
+                infrastructure as code, monitoring, and application security. I
+                enjoy building secure, reliable, and automated software delivery
+                workflows.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -493,7 +518,8 @@ export function Portfolio() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white"
                 >
-                  <Linkedin size={17} /> LinkedIn Profile <ArrowUpRight size={14} />
+                  <Linkedin size={17} /> LinkedIn Profile{" "}
+                  <ArrowUpRight size={14} />
                 </a>
               </div>
             </div>
@@ -523,7 +549,8 @@ export function Portfolio() {
                   DevSecOps & observability
                 </p>
                 <p className="mt-4 inline-flex items-center gap-2 text-sm text-zinc-400">
-                  <MapPin size={15} className="text-orange-400" /> Pune, Maharashtra, India
+                  <MapPin size={15} className="text-orange-400" /> Pune,
+                  Maharashtra, India
                 </p>
               </div>
             </aside>
@@ -535,21 +562,25 @@ export function Portfolio() {
             <SectionHeading eyebrow="Profile" title="About me" />
             <div className="max-w-3xl text-base leading-8 text-zinc-300">
               <p>
-                Based in Hapur, Uttar Pradesh, and currently working in Pune, I am a DevOps Engineer
-                at SarvaGram contributing to cloud infrastructure and automation. My background
-                includes a B.Tech in Computer Science and C-DAC PGCP-ITISS in IT Infrastructure,
+                Based in Hapur, Uttar Pradesh, and currently working in Pune, I
+                am a DevOps Engineer at SarvaGram contributing to cloud
+                infrastructure and automation. My background includes a B.Tech
+                in Computer Science and C-DAC PGCP-ITISS in IT Infrastructure,
                 Systems and Security.
               </p>
               <p className="mt-4">
-                I work with AWS, Docker, Kubernetes, Terraform, and GitHub Actions, and am
-                interested in CI/CD, DevSecOps, monitoring, cloud infrastructure, and security
-                automation.
+                I work with AWS, Docker, Kubernetes, Terraform, and GitHub
+                Actions, and am interested in CI/CD, DevSecOps, monitoring,
+                cloud infrastructure, and security automation.
               </p>
             </div>
           </div>
         </section>
 
-        <section id="work" className="scroll-mt-20 border-b border-white/10 bg-[#151917]">
+        <section
+          id="work"
+          className="scroll-mt-20 border-b border-white/10 bg-[#151917]"
+        >
           <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
             <SectionHeading
               eyebrow="Career"
@@ -577,7 +608,9 @@ export function Portfolio() {
                       )}
                       <div>
                         <div className="flex flex-wrap items-center gap-3">
-                          <h3 className="text-xl font-semibold text-white">{job.role}</h3>
+                          <h3 className="text-xl font-semibold text-white">
+                            {job.role}
+                          </h3>
                           {job.current && (
                             <span className="rounded border border-orange-300/30 bg-orange-300/10 px-2 py-1 text-xs font-medium text-orange-200">
                               Current role
@@ -600,7 +633,9 @@ export function Portfolio() {
                   <p className="mt-2 text-sm text-zinc-400">
                     {job.employment} · {job.location}
                   </p>
-                  <p className="mt-5 max-w-4xl leading-7 text-zinc-300">{job.description}</p>
+                  <p className="mt-5 max-w-4xl leading-7 text-zinc-300">
+                    {job.description}
+                  </p>
                   {job.current ? null : (
                     <ul className="mt-4 grid gap-2 text-sm leading-6 text-zinc-400 sm:grid-cols-2">
                       <li>Flask REST APIs with request validation</li>
@@ -624,8 +659,13 @@ export function Portfolio() {
             />
             <div className="grid gap-x-10 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
               {skills.map((group) => (
-                <div key={group.title} className="border-t border-zinc-700 pt-4">
-                  <h3 className="mb-4 text-base font-semibold text-zinc-100">{group.title}</h3>
+                <div
+                  key={group.title}
+                  className="border-t border-zinc-700 pt-4"
+                >
+                  <h3 className="mb-4 text-base font-semibold text-zinc-100">
+                    {group.title}
+                  </h3>
                   <Tags items={group.items} />
                 </div>
               ))}
@@ -633,7 +673,10 @@ export function Portfolio() {
           </div>
         </section>
 
-        <section id="projects" className="scroll-mt-20 border-b border-white/10 bg-[#151917]">
+        <section
+          id="projects"
+          className="scroll-mt-20 border-b border-white/10 bg-[#151917]"
+        >
           <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
             <SectionHeading
               eyebrow="Selected work"
@@ -654,7 +697,13 @@ export function Portfolio() {
                 title="Fake News Detection System — AI-Powered Video Fact-Checking"
                 category="AI · Backend"
                 description="Developed an AI-based video fact-checking system that processes uploaded videos, converts speech into text using Whisper, identifies important claims using BERT, and verifies claims using Perplexity AI and external sources. Built Flask APIs and a simple user interface to automate video processing and display verification results."
-                technologies={["Python", "Flask", "Whisper", "BERT", "Perplexity AI"]}
+                technologies={[
+                  "Python",
+                  "Flask",
+                  "Whisper",
+                  "BERT",
+                  "Perplexity AI",
+                ]}
                 icon={BriefcaseBusiness}
               />
               {additionalProjects.map((project) => (
@@ -672,7 +721,10 @@ export function Portfolio() {
           </div>
         </section>
 
-        <section id="education" className="scroll-mt-20 border-b border-white/10">
+        <section
+          id="education"
+          className="scroll-mt-20 border-b border-white/10"
+        >
           <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
             <SectionHeading eyebrow="Education" title="Academic background" />
             <div className="grid gap-4 md:grid-cols-2">
@@ -693,13 +745,19 @@ export function Portfolio() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wider text-orange-300">
-                        {index === 0 ? "Postgraduate" : index === 1 ? "Undergraduate" : "School"}
+                        {index === 0
+                          ? "Postgraduate"
+                          : index === 1
+                            ? "Undergraduate"
+                            : "School"}
                       </p>
                       <h3 className="mt-3 text-lg font-semibold leading-snug text-white">
                         {item.program}
                       </h3>
                       <p className="mt-2 text-zinc-300">{item.institution}</p>
-                      <p className="mt-2 text-sm leading-6 text-zinc-400">{item.detail}</p>
+                      <p className="mt-2 text-sm leading-6 text-zinc-400">
+                        {item.detail}
+                      </p>
                     </div>
                   </div>
                   {index === 0 && (
@@ -709,9 +767,14 @@ export function Portfolio() {
                       </summary>
                       <ul className="mt-3 space-y-2 text-zinc-400">
                         {cdacModules.map(([module, marks]) => (
-                          <li key={module} className="flex justify-between gap-4">
+                          <li
+                            key={module}
+                            className="flex justify-between gap-4"
+                          >
                             <span>{module}</span>
-                            <span className="shrink-0 text-zinc-300">{marks}</span>
+                            <span className="shrink-0 text-zinc-300">
+                              {marks}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -723,9 +786,15 @@ export function Portfolio() {
           </div>
         </section>
 
-        <section id="certifications" className="scroll-mt-20 border-b border-white/10 bg-[#151917]">
+        <section
+          id="certifications"
+          className="scroll-mt-20 border-b border-white/10 bg-[#151917]"
+        >
           <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
-            <SectionHeading eyebrow="Professional learning" title="Certifications" />
+            <SectionHeading
+              eyebrow="Professional learning"
+              title="Certifications"
+            />
             <ul className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {certifications.map((certification) => (
                 <li
@@ -744,11 +813,18 @@ export function Portfolio() {
                         />
                       </div>
                     ) : (
-                      <ShieldCheck className="mt-0.5 shrink-0 text-orange-400" size={19} />
+                      <ShieldCheck
+                        className="mt-0.5 shrink-0 text-orange-400"
+                        size={19}
+                      />
                     )}
                     <div className="min-w-0">
-                      <h3 className="font-medium leading-snug text-white">{certification.title}</h3>
-                      <p className="mt-2 text-sm text-zinc-400">{certification.issuer}</p>
+                      <h3 className="font-medium leading-snug text-white">
+                        {certification.title}
+                      </h3>
+                      <p className="mt-2 text-sm text-zinc-400">
+                        {certification.issuer}
+                      </p>
                     </div>
                   </div>
                   {certification.certificateFile && (
@@ -782,7 +858,9 @@ export function Portfolio() {
                 <Mail className="text-orange-400" size={19} />
                 <span>
                   <span className="block text-xs text-zinc-400">Email</span>
-                  <span className="mt-1 block text-sm text-zinc-200">veenayaksirohi@gmail.com</span>
+                  <span className="mt-1 block text-sm text-zinc-200">
+                    veenayaksirohi@gmail.com
+                  </span>
                 </span>
               </a>
               <a
@@ -792,7 +870,9 @@ export function Portfolio() {
                 <Phone className="text-orange-400" size={19} />
                 <span>
                   <span className="block text-xs text-zinc-400">Phone</span>
-                  <span className="mt-1 block text-sm text-zinc-200">+91 73022 23304</span>
+                  <span className="mt-1 block text-sm text-zinc-200">
+                    +91 73022 23304
+                  </span>
                 </span>
               </a>
               <a
@@ -804,7 +884,9 @@ export function Portfolio() {
                 <Linkedin className="text-orange-400" size={19} />
                 <span>
                   <span className="block text-xs text-zinc-400">LinkedIn</span>
-                  <span className="mt-1 block text-sm text-zinc-200">veenayaksirohi</span>
+                  <span className="mt-1 block text-sm text-zinc-200">
+                    veenayaksirohi
+                  </span>
                 </span>
               </a>
               <a
@@ -816,7 +898,9 @@ export function Portfolio() {
                 <Github className="text-orange-400" size={19} />
                 <span>
                   <span className="block text-xs text-zinc-400">GitHub</span>
-                  <span className="mt-1 block text-sm text-zinc-200">veenayaksirohi</span>
+                  <span className="mt-1 block text-sm text-zinc-200">
+                    veenayaksirohi
+                  </span>
                 </span>
               </a>
             </div>
@@ -827,7 +911,9 @@ export function Portfolio() {
       <footer className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-6 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <p>Veenayak Sirohi · DevOps Engineer</p>
-          <p>Hapur, Uttar Pradesh, India · Working in Pune, Maharashtra, India</p>
+          <p>
+            Hapur, Uttar Pradesh, India · Working in Pune, Maharashtra, India
+          </p>
         </div>
       </footer>
       {showBackToTop && (
@@ -842,5 +928,5 @@ export function Portfolio() {
         </button>
       )}
     </div>
-  )
+  );
 }
